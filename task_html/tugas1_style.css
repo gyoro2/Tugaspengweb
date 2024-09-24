@@ -1,4 +1,21 @@
 h1 {
+    color: red;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
     color: blue;
     font-family: "Times New Roman", Times, serif;
 }
+
+h3 {
+    color: green;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.gambar {
+    float: left; 
+    margin-right: 15px; 
+  }
+  .clear {
+    clear: both; 
+  }
