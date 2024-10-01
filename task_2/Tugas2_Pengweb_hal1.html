@@ -7,14 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="Tugas2_Pengweb_hal2.html" method="post">
+    <div>
+        <h1>Form Pendaftaran</h1>
+    <form action="Tugas2_Pengweb_hal2.html" method="post" onsubmit="return validateForm()">
         <label for="name">Nama:</label>
-        <input type="text" id="name" name="name">
-  
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-  
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
         <input type="submit" value="Daftar">
+    </div>
+</form>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+
+        if (name == "" || email == "") {
+            alert("Harap mengisi semua field!");
+            return false;
+        }
+    }
+</script>
     </form>
     
 </body>
