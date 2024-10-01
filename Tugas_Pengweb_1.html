@@ -12,6 +12,25 @@
         .clear {
           clear: both; 
         }
+        table tr td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        table caption{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        tbody tr:nth-child(odd){
+            background-color: gray;
+        }
+        thead tr{
+            background-color: black;
+            color: white;
+        }
+
       </style>
 </head>
 <body>
@@ -159,6 +178,44 @@
         </p>
         <div class="clear"></div>
         <br>
+
+    <table>
+        <caption>Profil Singkat</caption>
+        <th>
+            <tr>
+                <td>Nomor</td>
+                <td>Nama</td>
+                <td>Element</td>
+                <td>Path</td>
+            </tr>
+        </th>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Firefly</td>
+                <td>Fire</td>
+                <td>Destruction</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Acheron</td>
+                <td>Electro</td>
+                <td>Nihility</td>
+            </tr>
+        </tbody>
+        <td>Jumlah Data : 1</td>
+        <tfoot></tfoot>
+    </table>
+<br>
+    <form action="#" method="get">
+        <label for="nama">Nama</label>
+        <input type="text" name="nama" id="nama"> <br>
+        <label for="element">Element</label>
+        <input type="text" name="element" id="element"> <br>
+        <label for="path">Path</label>
+        <input type="text" name="path" id="path"><br>
+        <button type="submit">Submit</button>   
+    </form>
 </body>
 <footer>
     <div style="display: flex; justify-content: center;">
