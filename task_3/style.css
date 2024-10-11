@@ -6,46 +6,48 @@ nav{
     margin-left: auto;
 }
 
-  nav ul {
+nav ul {
     display: flex;
-    gap: 20px;  
+    gap: 20px;
     list-style: none;
     padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
+}
 
-  nav a {
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
     text-decoration: none;
     color: burlywood;
     padding: 5px;
     margin: 0 10px;
 }
-  
-  nav ul li a {
+
+nav ul li a {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
-  }
-  
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     background-color: #555;
     color: black;
-  }
-  
-  section {
+}
+
+/* Section Styling */
+section {
     padding: 50px;
     margin: 50px 0;
     background-color: #f0f0f0;
-  }
-  
-  #section1, #section2, #section3 {
-    height: 500px; /* Contoh tinggi agar scroll terlihat */
-  }
-  
-  footer {
+}
+
+#section1, #section2, #section3 {
+    height: 500px;
+}
+
+/* Footer Styling */
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,9 +56,9 @@ nav{
     background-image: linear-gradient(to right, blue, white);
 }
 
+/* Character Container and Profile Styling */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -66,15 +68,25 @@ body {
 
 .character-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 80%;
     margin: 20px 0;
+    height: 100vh;
+    height: calc(100vh - 200px);
 }
 
 .character {
-    width: 100px;
-    height: 100px;
+    flex: 1 1 calc(33.33% - 20px);
+    width: 80%;;
+    height: auto;
     cursor: pointer;
+    margin: 10px auto;
+}
+
+.character img {
+    width: 100%; 
+    height: auto;
 }
 
 .profile-container {
