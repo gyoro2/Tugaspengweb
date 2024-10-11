@@ -35,7 +35,11 @@ nav ul li a:hover {
     color: black;
 }
 
-/* Section Styling */
+header {
+    background-image: linear-gradient(to right, blue, white);
+    padding: 20px;
+    text-align: center;
+}
 section {
     padding: 50px;
     margin: 50px 0;
@@ -46,17 +50,7 @@ section {
     height: 500px;
 }
 
-/* Footer Styling */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    padding: 10px;
-    background-image: linear-gradient(to right, blue, white);
-}
 
-/* Character Container and Profile Styling */
 body {
     font-family: Arial, sans-serif;
     flex-direction: column;
@@ -66,27 +60,25 @@ body {
     margin: 0;
 }
 
+
 .character-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    margin: 20px 0;
-    height: 100vh;
-    height: calc(100vh - 200px);
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 100%; 
+    padding-bottom: 50px; 
+    height: auto; 
 }
 
 .character {
-    flex: 1 1 calc(33.33% - 20px);
-    width: 80%;;
-    height: auto;
+    flex: 1 1 calc(25% - 20px); 
+    margin: 10px; 
     cursor: pointer;
-    margin: 10px auto;
 }
 
 .character img {
     width: 100%; 
-    height: auto;
+    height: auto; 
 }
 
 .profile-container {
@@ -99,15 +91,24 @@ body {
 }
 
 .profile {
-    display: none; /* Semua profil tersembunyi secara default */
+    display: none; 
+    margin-top: 20px; 
 }
 
-/* Menampilkan profil sesuai karakter yang dipilih */
-#char1:checked ~ .profile-container #profile1,
+#Firefly:checked ~ .profile-container #Firefly,
 #char2:checked ~ .profile-container #profile2,
 #char3:checked ~ .profile-container #profile3,
 #char4:checked ~ .profile-container #profile4,
 #char5:checked ~ .profile-container #profile5,
 #char6:checked ~ .profile-container #profile6 {
-    display: block; /* Profil ditampilkan saat karakter dipilih */
+    display: block;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 10px;
+    background-image: linear-gradient(to right, blue, white);
 }
