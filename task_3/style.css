@@ -1,0 +1,46 @@
+nav{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #800000;
+    font: 1em sans-serif;
+    margin-right: auto;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  section {
+    padding: 50px;
+    margin: 50px 0;
+    background-color: #f0f0f0;
+  }
+  
+  #section1, #section2, #section3 {
+    height: 500px; /* Contoh tinggi agar scroll terlihat */
+  }
+  
