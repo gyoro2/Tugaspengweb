@@ -4,13 +4,13 @@ body {
 
 h2 {
     text-align: center;
-    color: #1a237e;
+    color: white;
 }
 
 form {
     width: 300px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 10px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;

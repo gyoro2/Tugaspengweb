@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Form Login</h2>
+    <h2>Login</h2>
     <form method="POST" action="">
         <label>Username</label>
         <input type="username" name="username" required><br>
