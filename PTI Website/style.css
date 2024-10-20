@@ -1,9 +1,13 @@
-/* CSS untuk halaman login */
 body {
-    background-color: #1a237e;
+    background-color: #0A397F;
 }
 
-.login-container {
+h2 {
+    text-align: center;
+    color: #1a237e;
+}
+
+form {
     width: 300px;
     margin: 0 auto;
     margin-top: 100px;
@@ -12,30 +16,22 @@ body {
     border-radius: 5px;
 }
 
-.login-container h2 {
-    text-align: center;
-    color: #1a237e;
-}
-
-.login-form {
-    margin-top: 20px;
-}
-
-.login-form label {
+form label {
     display: block;
     margin-bottom: 10px;
     color: #1a237e;
 }
 
-.login-form input[type="text"],
-.login-form input[type="password"] {
+form input[type="username"],
+form input[type="email"],
+form input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #1a237e;
     border-radius: 3px;
 }
 
-.login-form button {
+form input[type="submit"] {
     width: 100%;
     padding: 10px;
     background-color: #1a237e;
@@ -45,6 +41,6 @@ body {
     cursor: pointer;
 }
 
-.login-form button:hover {
+form input[type="submit"]:hover {
     background-color: #0d47a1;
 }
