@@ -37,10 +37,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>Form Login</h2>
     <form method="POST" action="">
-        <label>Email:</label>
+        <label>Username</label>
+        <input type="username" name="username" required><br>
+        <label>Email</label>
         <input type="email" name="email" required><br>
-        <label>Password:</label>
+        <label>Password</label>
         <input type="password" name="password" required><br>
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" required><br>
         <input type="submit" value="Login">
     </form>
 </body>
