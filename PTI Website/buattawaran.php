@@ -26,7 +26,7 @@
         <div class="menu">
             <ul>
                 <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
     </div>
