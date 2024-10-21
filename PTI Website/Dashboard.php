@@ -6,18 +6,7 @@
 </head>
 
 <header>
-    <div class="navbar">
-        <div class="menu">
-            <ul>
-                <li><a href="#">Admin</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
-
-<body>
-    <div class="sidebar">
+<div class="sidebar">
         <ul>
             <h2>SIVASAK</h2>
             <li><img src="home.png" alt=""><a href="#">Dashboard</a></li>
@@ -30,8 +19,16 @@
             <li><img src="alert.png" alt=""> <a href="#">Daftar Komplain</a></li>
         </ul>
     </div>
-    <div class="content">
-        <!-- Konten dashboard -->
+</header>
+
+<body>
+<div class="navbar">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

@@ -39,14 +39,43 @@
     vertical-align: middle;
 }
 
-.navbar {
-    background-color: #0A397F;
-    color: white;
-    padding: 10px;
+.sidebar ul h2{
     text-align: center;
+    color: white;
+    margin-bottom: 70px ;
 }
 
-h2{
-    text-align: center;
+.navbar {
+    background-color: #1565c0;
+    color: black;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar ul li a:hover {
     color: white;
+}
+
+body {
+    display: flex;
+    height: 50px;
+    width: 100%;
 }
