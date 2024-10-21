@@ -4,17 +4,20 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="styledash.css">
 </head>
+
+<header></header>
+
 <body>
     <div class="sidebar">
         <ul>
-            <li><a href="#">Menu 1</a></li>
-            <li><a href="#">Menu 2</a></li>
-            <li><a href="#">Menu 3</a></li>
-            <li><a href="#">Menu 4</a></li>
-            <li><a href="#">Menu 5</a></li>
-            <li><a href="#">Menu 6</a></li>
-            <li><a href="#">Menu 7</a></li>
-            <li><a href="#">Menu 8</a></li>
+            <li><img src="home.png" alt=""><a href="#">Dashboard</a></li>
+            <li><img src="pb.png" alt=""> <a href="#">Buat Tawaran</a></li>
+            <li><img src="cb.png" alt=""><a href="#">Seleksi Vendor</a></li>
+            <li><img src="sh.png" alt=""><a href="#">Negoisasi</a></li>
+            <li><img src="undo.png" alt=""><a href="#">Kontrol Tender</a></li>
+            <li><img src="as.png" alt=""> <a href="#">Buat Akun Supir</a></li>
+            <li><img src="file.png" alt=""> <a href="#">Data Kendaraan</a></li>
+            <li><img src="alert.png" alt=""> <a href="#">Daftar Komplain</a></li>
         </ul>
     </div>
     <div class="content">
@@ -22,17 +25,3 @@
     </div>
 </body>
 </html>
-<?php
-    $menuItems = array("Menu 1", "Menu 2", "Menu 3", "Menu 4", "Menu 5", "Menu 6", "Menu 7", "Menu 8");
-?>
-
-<div class="sidebar">
-    <ul>
-        <?php foreach ($menuItems as $menuItem): ?>
-            <li><a href="#"><?php echo $menuItem; ?></a></li>
-        <?php endforeach; ?>
-    </ul>
-</div>
-<div class="content">
-    <!-- Konten dashboard -->
-</div>
