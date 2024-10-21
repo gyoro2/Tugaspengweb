@@ -22,17 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Form Registrasi</h2>
+    <h2>Register</h2>
     <form method="POST" action="">
-        <label>Username:</label>
-        <input type="text" name="username" required><br>
-        <label>Email:</label>
-        <input type="email" name="email" required><br>
-        <label>Password:</label>
-        <input type="password" name="password" required><br>
-        <input type="submit" value="Daftar">
+    <input type="username" name="username" required placeholder="Username"><br>
+        <input type="email" name="email" required placeholder="Email"><br>
+        <input type="password" name="password" required placeholder="Password"><br>
+        <input type="submit" value="Register">
+        <p style="text-align: center;">Already have an account? <a href="login.php">Login</a></p>
     </form>
 </body>
 </html>
