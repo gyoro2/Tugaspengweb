@@ -25,12 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Register</h2>
+    <h2>Create Account</h2>
     <form method="POST" action="">
     <input type="username" name="username" required placeholder="Username"><br>
         <input type="email" name="email" required placeholder="Email"><br>
         <input type="password" name="password" required placeholder="Password"><br>
-        <input type="submit" value="Register">
+        <input type="submit" value="Create Account">
         <p style="text-align: center;">Already have an account? <a href="login.php">Login</a></p>
     </form>
 </body>
