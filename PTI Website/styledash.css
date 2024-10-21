@@ -19,6 +19,7 @@
     text-decoration: none;
     color: whitesmoke;
     vertical-align: middle;
+    
 }
 
 .content {
@@ -36,6 +37,13 @@
     height: 18px;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+.navbar {
+    background-color: #0A397F;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 h2{

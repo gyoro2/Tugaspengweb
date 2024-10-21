@@ -5,7 +5,16 @@
     <link rel="stylesheet" href="styledash.css">
 </head>
 
-<header></header>
+<header>
+    <div class="navbar">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 
 <body>
     <div class="sidebar">
