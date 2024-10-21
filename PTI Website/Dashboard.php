@@ -25,7 +25,7 @@
 <div class="navbar">
         <div class="menu">
             <ul>
-                <li><a href="#">Admin</a></li>
+                <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
                 <li><a href="#">Logout</a></li>
             </ul>
         </div>
