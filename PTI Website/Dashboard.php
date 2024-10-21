@@ -10,6 +10,7 @@
 <body>
     <div class="sidebar">
         <ul>
+            <h2>SIVASAK</h2>
             <li><img src="home.png" alt=""><a href="#">Dashboard</a></li>
             <li><img src="pb.png" alt=""> <a href="#">Buat Tawaran</a></li>
             <li><img src="cb.png" alt=""><a href="#">Seleksi Vendor</a></li>
