@@ -4,14 +4,37 @@ include 'database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash password
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
 
-    // Simpan ke database
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
-    if ($conn->query($sql) === TRUE) {
-        echo "Registrasi berhasil!";
+    // Cek apakah password dan konfirmasi password sama
+    if ($password !== $confirm_password) {
+        $error = "Password dan konfirmasi password tidak cocok!";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // Hash password untuk keamanan
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Cek apakah email atau username sudah ada di database
+        $stmt_check = $conn->prepare("SELECT * FROM users WHERE email = ? OR username = ?");
+        $stmt_check->bind_param("ss", $email, $username);
+        $stmt_check->execute();
+        $result = $stmt_check->get_result();
+
+        if ($result->num_rows > 0) {
+            $error = "Email atau Username sudah digunakan. Silakan pilih yang lain.";
+        } else {
+            // Simpan user baru ke database menggunakan prepared statement
+            $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+            $stmt->bind_param("sss", $username, $email, $hashed_password);
+
+            if ($stmt->execute()) {
+                // Redirect ke halaman login setelah registrasi berhasil
+                header("Location: index.php");
+                exit(); // Tambahkan exit() setelah header untuk menghentikan eksekusi kode lebih lanjut
+            } else {
+                $error = "Terjadi kesalahan: " . $stmt->error;
+            }
+        }
     }
 }
 ?>
@@ -27,11 +50,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>Create Account</h2>
     <form method="POST" action="">
-    <input type="username" name="username" required placeholder="Username"><br>
+        <input type="username" name="username" required placeholder="Username"><br>
         <input type="email" name="email" required placeholder="Email"><br>
         <input type="password" name="password" required placeholder="Password"><br>
+        <input type="password" name="confirm_password" required placeholder="Confirm Password"><br>
         <input type="submit" value="Create Account">
-        <p style="text-align: center;">Already have an account? <a href="login.php">Login</a></p>
+        <p style="text-align: center;">Already have an account? <a href="index.php">Login</a></p>
     </form>
+
+    <?php
+    if (isset($error)) {
+        echo "<p style='color:red;'>$error</p>";
+    }
+    ?>
 </body>
 </html>

@@ -6,22 +6,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Ambil data user dari database
-    $sql = "SELECT * FROM users WHERE email='$email'";
-    $result = $conn->query($sql);
+    // Ambil data user dari database berdasarkan email
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
+
         // Verifikasi password
         if (password_verify($password, $row['password'])) {
+            // Simpan informasi user dalam session
             $_SESSION['username'] = $row['username'];
-            header("Location: welcome.php");
-            exit;
+            $_SESSION['email'] = $row['email'];
+            header("Location: Dashboard.php"); // Arahkan ke halaman dashboard setelah login
+            exit();
         } else {
-            echo "Password salah!";
+            $error = "Password salah!";
         }
     } else {
-        echo "User tidak ditemukan!";
+        $error = "User tidak ditemukan!";
     }
 }
 ?>
@@ -37,12 +43,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>Login</h2>
     <form method="POST" action="">
-        <input type="username" name="username" required placeholder="Username"><br>
         <input type="email" name="email" required placeholder="Email"><br>
         <input type="password" name="password" required placeholder="Password"><br>
-        <input type="password" name="confirm_password" required placeholder="Confirm Password"><br>
         <input type="submit" value="Login">
         <p style="text-align: center;">Don't have an account? <a href="register.php">Register</a></p>
     </form>
+
+    <?php
+    if (isset($error)) {
+        echo "<p style='color:red;'>$error</p>";
+    }
+    ?>
 </body>
 </html>
