@@ -77,8 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </div>
     </div>
-    
-<div class="content">
+
+<div class="akun">
         <h2>Buat Akun Tender Baru</h2>
         <!-- Menampilkan pesan jika ada -->
         <?php if (isset($error_message)): ?>

@@ -1,8 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #1565c0;
+    color: black;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Nilai z-index lebih rendah dari sidebar */
+    height: 50px;
+}
+
+.akun {
+    margin-left: 650px; /* Memberikan jarak dari sidebar */
+    padding: 20px;
+    padding-top: 70px; /* Memberikan jarak dari navbar */
+    
+}
+
 .sidebar {
     width: 200px;
     height: 100vh;
     background-color: #0A397F;
-    float: left;
+    position: fixed; /* Agar sidebar tetap di posisi yang diinginkan */
+    top: 0; /* Agar sidebar dimulai dari atas, termasuk memotong navbar */
+    left: 0;
+    z-index: 2000; /* Nilai z-index lebih tinggi dari navbar */
 }
 
 .sidebar ul {
@@ -19,12 +51,6 @@
     text-decoration: none;
     color: whitesmoke;
     vertical-align: middle;
-    
-}
-
-.content {
-    margin-left: 200px;
-    padding: 20px;
 }
 
 .sidebar ul li a:hover {
@@ -39,18 +65,10 @@
     vertical-align: middle;
 }
 
-.sidebar ul h2{
+.sidebar ul h2 {
     text-align: center;
     color: white;
-    margin-bottom: 70px ;
-}
-
-.navbar {
-    background-color: #1565c0;
-    color: black;
-    padding: 10px;
-    text-align: right;
-    width: 100%;
+    margin-bottom: 70px;
 }
 
 .navbar ul {
@@ -77,17 +95,4 @@
 
 .navbar ul li a:hover {
     color: white;
-}
-
-body {
-    display: flex;
-    height: 50px;
-    width: 100%;
-}
-
-.content{
-    display: fixed;
-    margin-left: 200px;
-    padding: 20px;
-
 }

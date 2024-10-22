@@ -27,7 +27,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
             <li><img src="as.png" alt=""><a href="buatakunsupir.php">Buat Akun Supir</a></li>
             <li><img src="file.png" alt=""><a href="datakendaraan.php">Data Kendaraan</a></li>
             <li><img src="alert.png" alt=""><a href="daftarkomplain.php">Daftar Komplain</a></li>
-            <li><img src="user.png" alt=""><a href="pembuatantender.php">Buat Akun Tender</a></li>
+            <li><img src="bat.png" alt=""><a href="pembuatantender.php">Buat Akun Tender</a></li>
         </ul>
     </div>
 </header>
