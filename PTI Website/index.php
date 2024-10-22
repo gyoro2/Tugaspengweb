@@ -1,7 +1,8 @@
 <?php
 session_start();
-include 'database.php';
+include 'database.php'; // Pastikan ini adalah file yang mengatur koneksi ke database
 
+// Cek apakah ada form login yang dikirim
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -9,25 +10,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil data user dari database berdasarkan email
     $sql = "SELECT * FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
+    if ($stmt) {
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-        // Verifikasi password
-        if (password_verify($password, $row['password'])) {
-            // Simpan informasi user dalam session
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['email'] = $row['email'];
-            header("Location: Dashboard.php"); // Arahkan ke halaman dashboard setelah login
-            exit();
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+
+            // Verifikasi password
+            if (password_verify($password, $row['password'])) {
+                // Simpan informasi user dalam session
+                $_SESSION['username'] = $row['username'];
+                $_SESSION['role'] = $row['role']; // Simpan role juga jika diperlukan
+                header("Location: dashboard.php"); // Arahkan ke halaman dashboard setelah login
+                exit();
+            } else {
+                $error = "Password salah!";
+            }
         } else {
-            $error = "Password salah!";
+            $error = "User tidak ditemukan!";
         }
+
+        // Menutup statement setelah selesai digunakan
+        $stmt->close();
     } else {
-        $error = "User tidak ditemukan!";
+        $error = "Query tidak valid: " . $conn->error;
     }
 }
 ?>
@@ -54,5 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p style='color:red;'>$error</p>";
     }
     ?>
+
+    <!-- Hapus koneksi ditutup di sini -->
 </body>
 </html>
+
+<?php
+$conn->close(); // Pindahkan penutupan koneksi ke luar dari HTML
+?>

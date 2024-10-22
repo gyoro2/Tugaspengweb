@@ -1,15 +1,41 @@
 <?php
-// Database configuration
-$servername = "localhost";  // biasanya "localhost"
-$username = "root";         // username default XAMPP adalah "root"
-$password = "";             // password default XAMPP kosong
-$dbname = "pti_website";  // ganti dengan nama database kamu
+// database.php
+$servername = "localhost";
+$username = "root"; // username database
+$password = ""; // password database
+$dbname = "pti_website"; // ganti dengan nama database yang sesuai
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Membuat koneksi
+$conn = new mysqli($servername, $username, $password, $dbname); // Pastikan ini adalah $dbname, bukan $database
 
-// Check connection
+// Cek koneksi
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Koneksi gagal: " . $conn->connect_error);
 }
+
+// Cek apakah akun admin sudah ada
+$sql_check_admin = "SELECT * FROM users WHERE username = 'admin'";
+$result = $conn->query($sql_check_admin);
+
+if ($result && $result->num_rows == 0) {
+    // Jika belum ada, buat akun admin baru
+    $admin_username = 'admin@gmail.com';
+    $admin_password = password_hash('admin000', PASSWORD_DEFAULT); // Ganti dengan password yang diinginkan
+    $role = 'admin';
+
+    $sql_create_admin = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($sql_create_admin);
+    $stmt->bind_param("sss", $admin_username, $admin_password, $role);
+    
+    if ($stmt->execute()) {
+        echo "Akun admin berhasil dibuat!";
+    } else {
+        echo "Terjadi kesalahan: " . $stmt->error;
+    }
+
+    $stmt->close();
+}
+
+// Jangan menutup koneksi di sini
+// $conn->close();
 ?>
