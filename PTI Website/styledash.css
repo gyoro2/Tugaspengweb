@@ -84,3 +84,10 @@ body {
     height: 50px;
     width: 100%;
 }
+
+.content{
+    display: fixed;
+    margin-left: 200px;
+    padding: 20px;
+
+}

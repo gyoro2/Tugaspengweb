@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>Create Account</h2>
     <form method="POST" action="">
-        <input type="text" name="username" required placeholder="Username"><br>
+        <input type="username" name="username" required placeholder="Username"><br>
         <input type="email" name="email" required placeholder="Email"><br>
         <input type="password" name="password" required placeholder="Password"><br>
         <input type="password" name="confirm_password" required placeholder="Confirm Password"><br>

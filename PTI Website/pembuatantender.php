@@ -69,6 +69,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </header>
 
 <body>
+<div class="navbar">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    
 <div class="content">
         <h2>Buat Akun Tender Baru</h2>
         <!-- Menampilkan pesan jika ada -->
