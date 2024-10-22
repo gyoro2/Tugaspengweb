@@ -63,11 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p style='color:red;'>$error</p>";
     }
     ?>
-
-    <!-- Hapus koneksi ditutup di sini -->
 </body>
 </html>
 
 <?php
-$conn->close(); // Pindahkan penutupan koneksi ke luar dari HTML
+$conn->close(); // Menutup koneksi di sini
 ?>

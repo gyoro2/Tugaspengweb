@@ -1,5 +1,6 @@
 <?php
-include 'database.php';
+session_start();
+include 'database.php'; // Menghubungkan dengan file database.php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -23,14 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows > 0) {
             $error = "Email atau Username sudah digunakan. Silakan pilih yang lain.";
         } else {
-            // Simpan user baru ke database menggunakan prepared statement
-            $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-            $stmt->bind_param("sss", $username, $email, $hashed_password);
+            // Simpan user baru ke database dengan role sebagai calon_tender
+            $role = 'calon_tender'; // Role untuk calon tender
+            $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $username, $email, $hashed_password, $role);
 
             if ($stmt->execute()) {
                 // Redirect ke halaman login setelah registrasi berhasil
                 header("Location: index.php");
-                exit(); // Tambahkan exit() setelah header untuk menghentikan eksekusi kode lebih lanjut
+                exit(); // Menghentikan eksekusi kode lebih lanjut
             } else {
                 $error = "Terjadi kesalahan: " . $stmt->error;
             }
@@ -50,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>Create Account</h2>
     <form method="POST" action="">
-        <input type="username" name="username" required placeholder="Username"><br>
+        <input type="text" name="username" required placeholder="Username"><br>
         <input type="email" name="email" required placeholder="Email"><br>
         <input type="password" name="password" required placeholder="Password"><br>
         <input type="password" name="confirm_password" required placeholder="Confirm Password"><br>
