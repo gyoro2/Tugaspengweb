@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="sidebar">
         <ul>
             <h2>SIVASAK</h2>
-            <li><img src="home.png" alt=""><a href="dashboard_admin.php">Dashboard</a></li>
+            <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
             <li><img src="pb.png" alt=""><a href="buattawaran.php">Buat Tawaran</a></li>
             <li><img src="cb.png" alt=""><a href="seleksivendor.php">Seleksi Vendor</a></li>
             <li><img src="sh.png" alt=""><a href="negoisasi.php">Negoisasi</a></li>
