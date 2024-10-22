@@ -1,3 +1,47 @@
+<?php
+session_start();
+include 'database.php'; // Pastikan ini adalah koneksi ke database
+
+// Cek apakah user adalah admin
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
+    header('Location: index.php');
+    exit();
+}
+
+// Proses pembuatan akun tender
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Menggunakan hash untuk keamanan password
+    $role = 'tender'; // Role selalu tender untuk akun baru yang dibuat admin
+
+    // Cek apakah username sudah digunakan
+    $sql_check = "SELECT * FROM users WHERE username = ?";
+    $stmt_check = $conn->prepare($sql_check);
+    $stmt_check->bind_param("s", $username);
+    $stmt_check->execute();
+    $result_check = $stmt_check->get_result();
+
+    if ($result_check->num_rows > 0) {
+        $error_message = "Username sudah digunakan. Silakan pilih username lain.";
+    } else {
+        // Query untuk menyimpan user baru ke database
+        $sql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sss", $username, $password, $role);
+
+        if ($stmt->execute()) {
+            $success_message = "Akun Tender berhasil dibuat!";
+        } else {
+            $error_message = "Terjadi kesalahan: " . $stmt->error;
+        }
+    }
+
+    $stmt_check->close();
+    $stmt->close();
+    $conn->close(); // Tutup koneksi database
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
