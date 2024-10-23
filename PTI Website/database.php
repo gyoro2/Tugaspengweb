@@ -29,7 +29,7 @@ if ($result && $result->num_rows == 0) {
     $stmt->bind_param("ssss", $admin_username, $admin_email, $admin_password, $role);
     
     if ($stmt->execute()) {
-        echo "Akun admin berhasil dibuat!";
+        echo "";
     } else {
         echo "Terjadi kesalahan: " . $stmt->error;
     }
