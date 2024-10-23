@@ -439,8 +439,12 @@ tr:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Buat Tawaran */
+.akun h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+/* Buat Tawaran */
 .main-content h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -483,3 +487,25 @@ form button:hover {
 }
 
 /* Buat Tawaran End */
+
+.search-container {
+    margin-bottom: 20px;
+    float: right;
+    border-radius: 5px;
+}
+
+.search-container input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

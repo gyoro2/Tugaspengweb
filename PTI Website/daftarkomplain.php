@@ -36,9 +36,10 @@
 <div class="akun">
     <h2>Daftar Komplain</h2>
     
-    <!-- Tombol Tambah Akun -->
-    <div class="button-container">
-        <button class="tambah-button" onclick="window.location.href='buatakuntender.php'">Tambah Akun</button>
+    <!-- Tombol Pencari -->
+    <div class="search-container">
+        <input type="text" placeholder="Cari Nopol Kendaraan">
+        <button class="search-button">Cari</button>
     </div>
 
     <div class="table-container">
@@ -81,6 +82,7 @@
             <button class="close-button" onclick="closeModal()">Tutup</button>
         </div>
     </div>
+</div>
 </div>
 
 <!-- Modal Pop-up untuk Hapus Akun Supir -->
