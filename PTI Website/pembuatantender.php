@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     <!-- Tombol Tambah Akun -->
     <div class="button-container">
-        <button class="tambah-button" onclick="window.location.href='buatakunsupir.php'">Tambah Akun</button>
+        <button class="tambah-button" onclick="window.location.href='buatakuntender.php'">Tambah Akun</button>
     </div>
 
     <div class="table-container">
@@ -110,13 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <button class="cek-button" onclick="openModal()">Cek</button>
                     </td>
                 </tr>
-                <!-- Tambahkan baris data supir lainnya -->
+                <!-- Tambahkan baris data tender lainnya -->
             </tbody>
         </table>
     </div>
 </div>
 
-<!-- Modal Pop-up untuk Cek Akun Supir -->
+<!-- Modal Pop-up untuk Cek Akun tender -->
 <div class="modal" id="modal">
     <div class="modal-content">
         <h3>Detail Tender</h3>
