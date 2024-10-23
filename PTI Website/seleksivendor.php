@@ -49,7 +49,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     
     <!-- Search Bar -->
     <div class="search-container">
-        <input type="text" id="search" placeholder="Search...">
+        <input type="text" placeholder="Cari Vendor">
+        <button class="search-button">Cari</button>
     </div>
 
     <div class="table-container">
