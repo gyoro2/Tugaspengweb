@@ -20,11 +20,11 @@ body {
     height: 50px;
 }
 
-.akun {
-    margin-left: 650px; /* Memberikan jarak dari sidebar */
-    padding: 20px;
-    padding-top: 70px; /* Memberikan jarak dari navbar */
-    
+.akuntender{
+    margin-left: 240px;
+    padding: 40px;
+    margin-top: 60px;
+    position: center;
 }
 
 .sidebar {
