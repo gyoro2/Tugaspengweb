@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     function deleteSupir() {
-        alert("Data supir dihapus");
+        alert("Data tender dihapus");
         closeDeleteModal();
     }
 </script>
