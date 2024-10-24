@@ -34,7 +34,7 @@
 
     <!-- Daftar Akun Supir -->
     <div class="akun">
-        <h2>Edit Akun Supir</h2>
+        <h2>Edit Akun Tender</h2>
         <div class="form-container">
             <form action="proses_input.php" method="POST">
                     <tr>
