@@ -34,7 +34,7 @@
 
     <!-- Daftar Akun Supir -->
 <div class="akun">
-    <h2>Daftar Akun Tender</h2>
+    <h2>Daftar Kendaraan</h2>
     
     <div class="search-container">
         <input type="text" placeholder="Cari Nopol Kendaraan">

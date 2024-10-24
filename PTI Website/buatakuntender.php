@@ -38,40 +38,24 @@
         <div class="form-container">
             <form action="proses_input.php" method="POST">
                     <tr>
-                        <th>Nomor Polisi</th>
-                        <td><input type="text" name="nomor_polisi"></td>
+                        <th>Nama Tender</th>
+                        <td><input type="text" id="nama" name="nama"></td>
                     </tr>
                     <tr>
-                        <th>Tahun Pembuatan</th>
-                        <td><input type="text" name="tahun_pembuatan"></td>
+                        <th>No. Telpon</th>
+                        <td><input type="text" id="telpon" name="telpon"></td>
                     </tr>
                     <tr>
-                        <th>Jenis Kendaraan</th>
-                        <td><input type="text" name="jenis_kendaraan"></td>
+                        <th>Email</th>
+                        <td><input type="email" id="email" name="email"></td>
                     </tr>
                     <tr>
-                        <th>No.STNK</th>
-                        <td><input type="text" name="no_stnk"></td>
+                        <th>Jenis</th>
+                        <td><input type="text" id="jenis" name="jenis"></td>
                     </tr>
                     <tr>
-                        <th>Masa Berlaku STNK</th>
-                        <td><input type="text" name="masa_berlaku_stnk"></td>
-                    </tr>
-                    <tr>
-                        <th>Masa Berlaku Pajak</th>
-                        <td><input type="text" name="masa_berlaku_pajak"></td>
-                    </tr>
-                    <tr>
-                        <th>Masa Berlaku Keur Kepala</th>
-                        <td><input type="text" name="masa_berlaku_keur_kepala"></td>
-                    </tr>
-                    <tr>
-                        <th>Masa Berlaku Keur Ekor</th>
-                        <td><input type="text" name="masa_berlaku_keur_ekor"></td>
-                    </tr>
-                    <tr>
-                        <th>Keterangan</th>
-                        <td><input type="text" name="keterangan"></td>
+                        <th>Alamat</th>
+                        <td><input type="text" id="alamat" name="alamat"></td>
                     </tr>
                     <div class="form-buttons">
                 <button type="submit" class="submit-button">Simpan</button>

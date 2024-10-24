@@ -49,13 +49,7 @@
             <input type="email" id="email" name="email" required value="tender1@example.com">
 
             <label for="jenis">Jenis </label>
-            <select id="jenis" name="Jenis" required>
-                <option value="Makanan">Makanan</option>
-                <option value="Kendaraan">Kendaraan</option>
-                <option value="Minuman" selected>Minuman</option>
-                <option value="Logistik">Logistik</option>
-                <option value="Kaca">Kaca</option>
-            </select>
+            <input type="text" id="jenis" name="Jenis" required>
 
             <label for="alamat">Alamat</label>
             <input type="text" id="alamat" name="alamat" required value="Jl. Contoh Alamat">
