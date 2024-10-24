@@ -51,6 +51,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
         <label for="judul-tawaran">Judul Tawaran</label>
         <input type="text" id="judul-tawaran" name="judul-tawaran" required>
 
+        <label for="kendaraan">Jenis Barang</label>
+        <input type="text" id="judul-tawaran" name="judul-tawaran" required>
+
         <label for="deskripsi">Deskripsi</label>
         <textarea id="deskripsi" name="deskripsi" rows="4" required></textarea>
 
