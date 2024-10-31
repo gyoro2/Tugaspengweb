@@ -13,10 +13,8 @@
     <ul>
         <h2>SIVASAK</h2>
         <li><img src="home.png" alt=""><a href="dashboardvendor.php">Dashboard</a></li>
-        <li><img src="register.png" alt=""><a href="pendaftaran.php">Pendaftaran</a></li>
-        <li><img src="negoisasi.png" alt=""><a href="negosiasi.php">Negosiasi</a></li>
-        <li><img src="announcement.png" alt=""><a href="pengumuman_pemenang.php">Pengumuman Pemenang Tender</a></li>
-        <li><img src="offer.png" alt=""><a href="daftar_tawaran.php">Daftar Tawaran Perusahaan</a></li>
+        <li><img src="negoisasi.png" alt=""><a href="negosiasivendor.php">Negosiasi</a></li>
+        <li><img src="offer.png" alt=""><a href="detailtawaran.php">Daftar Tawaran Perusahaan</a></li>
     </ul>
 </div>
 

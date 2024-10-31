@@ -12,9 +12,9 @@
 <div class="sidebar">
     <ul>
         <h2>SIVASAK</h2>
-        <li><img src="home.png" alt=""><a href="DashboardVendor.php">Dashboard</a></li>
-        <li><img src="negoisasi.png" alt=""><a href="negosiasi.php">Negosiasi</a></li>
-        <li><img src="offer.png" alt=""><a href="daftartawaran.php">Daftar Tawaran Perusahaan</a></li>
+        <li><img src="home.png" alt=""><a href="DashboardCalonVendor.php">Dashboard</a></li>
+        <li><img src="register.png" alt=""><a href="pendaftaran.php">Pendaftaran</a></li>
+        <li><img src="announcement.png" alt=""><a href="pengumuman_pemenang.php">Pengumuman Pemenang Tender</a></li>
     </ul>
 </div>
 
@@ -34,7 +34,7 @@
     <div class="info-container">
         <table>
             <tr>
-                <td>Nama Vendor</td>
+                <td>Nama Calon Vendor</td>
                 <td>: Vendor A</td>
             </tr>
             <tr>
