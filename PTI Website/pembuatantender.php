@@ -95,7 +95,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <th>No Telpon</th>
                     <th>Email</th>
                     <th>Password</th>
-                    <th>NPWP</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -104,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <td>Tender 1</td>
                     <td>0895410035080</td>
                     <td>tender1@example.com</td>
-                    <td>Makanan</td>
+                    <td>tender0101</td>
                     <td>
                         <button class="edit-button" onclick="window.location.href='editakuntender.php'">Edit</button>
                         <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
