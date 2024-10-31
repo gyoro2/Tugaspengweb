@@ -13,8 +13,8 @@
     <ul>
         <h2>SIVASAK</h2>
         <li><img src="home.png" alt=""><a href="DashboardVendor.php">Dashboard</a></li>
-        <li><img src="negoisasi.png" alt=""><a href="negosiasi.php">Negosiasi</a></li>
-        <li><img src="offer.png" alt=""><a href="detailtawaran.php">Daftar Tawaran Perusahaan</a></li>
+        <li><img src="negoisasi.png" alt=""><a href="negosiasivendor.php">Negosiasi</a></li>
+        <li><img src="offer.png" alt=""><a href="daftartawaran.php">Daftar Tawaran Perusahaan</a></li>
     </ul>
 </div>
 
@@ -29,35 +29,37 @@
 </div>
 
 <!-- Informasi Vendor -->
-<div class="vendor-info main-content">
-    <h2>Informasi Vendor</h2>
-    <div class="info-container">
-        <table>
-            <tr>
-                <td>Nama Vendor</td>
-                <td>: Vendor A</td>
-            </tr>
-            <tr>
-                <td>No. Telepon</td>
-                <td>: 081234567890</td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>: vendor@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Tipe Perusahaan</td>
-                <td>: PT</td>
-            </tr>
-            <tr>
-                <td>NPWP</td>
-                <td>: 123.4567899</td>
-            </tr>
-            <tr>
-                <td>Alamat Perusahaan</td>
-                <td>: Jl. Belimbing Raya</td>
-            </tr>
-        </table>
+<div class="main-content">
+    <div class="vendor-info">
+        <h2>Informasi Vendor</h2>
+        <div class="info-container">
+            <table>
+                <tr>
+                    <td>Nama Vendor</td>
+                    <td>: Vendor A</td>
+                </tr>
+                <tr>
+                    <td>No. Telepon</td>
+                    <td>: 081234567890</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>: vendor@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Tipe Perusahaan</td>
+                    <td>: PT</td>
+                </tr>
+                <tr>
+                    <td>NPWP</td>
+                    <td>: 123.4567899</td>
+                </tr>
+                <tr>
+                    <td>Alamat Perusahaan</td>
+                    <td>: Jl. Belimbing Raya</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
 
