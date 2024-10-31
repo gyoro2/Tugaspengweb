@@ -95,6 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <th>No Telpon</th>
                     <th>Email</th>
                     <th>Password</th>
+                    <th>NPWP</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -124,6 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <p>No Telpon: 089510035080</p>
         <p>Email: tender1@example.com</p>
         <p>Jenis : Makanan</p>
+        <p>NPWP : 123.4567899</p>
         <p>Alamat: Bandung</p>
         <div class="modal-buttons">
             <button class="close-button" onclick="closeModal()">Tutup</button>

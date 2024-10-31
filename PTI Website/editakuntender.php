@@ -51,6 +51,9 @@
             <label for="jenis">Jenis </label>
             <input type="text" id="jenis" name="Jenis" required>
 
+            <label for="telpon">NPWP</label>
+            <input type="text" id="npwp" name="npwp" required value="0895410035090">
+
             <label for="alamat">Alamat</label>
             <input type="text" id="alamat" name="alamat" required value="Jl. Contoh Alamat">
 
