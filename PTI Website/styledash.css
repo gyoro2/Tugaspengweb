@@ -647,3 +647,96 @@ form button:hover {
     resize: none;
     height: 100px;
 }
+
+/* Perluasan Layout dan Spacing */
+.main-content, .content, .akun, .akuntender, .vendor-info, .offer-list, .offer-details {
+    width: calc(100% - 300px); /* Memperluas lebar konten dengan jarak tambahan dari sidebar */
+    margin-left: 300px; /* Lebar sidebar yang lebih lebar */
+    padding: 40px 60px;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 300px; /* Sidebar yang lebih lebar */
+}
+
+.form-container, .table-container, .info-container, .details-box {
+    max-width: 700px; /* Konten form/table lebih lebar */
+    padding: 30px; /* Padding tambahan */
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Menambah Jarak Antar Elemen pada Form */
+.form-container label, .form-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.form-container input, .form-container select, .form-container textarea {
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.table-container table, .details-box table, .info-container table {
+    margin-top: 20px;
+}
+
+.form-container .submit-button {
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #1565c0;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #104a9c;
+}
+
+/* Card Styles dengan Lebar yang Lebih Besar */
+.dashboard-cards .card {
+    width: 30%;
+    padding: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.dashboard-cards .card p {
+    font-size: 36px;
+}
+
+/* Padding & Margin tambahan pada elemen modal */
+.modal-content, .delete-modal-content {
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.modal h3, .delete-modal h3 {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.modal-buttons button, .delete-modal-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
