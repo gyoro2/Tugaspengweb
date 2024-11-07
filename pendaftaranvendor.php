@@ -14,6 +14,7 @@
         <h2>SIVASAK</h2>
         <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
         <li><img src="vendor.png" alt=""><a href="pendaftaran_vendor.php">Pendaftaran Vendor</a></li>
+        <li><img src="questioner.png" alt=""><a href="questioner_supplier.php">Questioner Supplier</a></li>
         <li><img src="announcement.png" alt=""><a href="pengumuman_pemenang.php">Pengumuman Pemenang Vendor</a></li>
     </ul>
 </div>
