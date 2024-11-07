@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buat Akun Supir</title>
+    <title>Edit Akun Supir</title>
     <link rel="stylesheet" href="styledash.css">
 </head>
 <body>
@@ -34,34 +34,33 @@
     </div>
 </div>
 
-<!-- Buat Akun Supir Form -->
+<!-- Edit Akun Tender Form -->
 <div class="akun">
-    <h2>Buat Akun Supir</h2>
+    <h2>Edit Akun Tender</h2>
     <div class="form-container">
-        <form action="proses-akun-supir.php" method="POST">
-            <label for="nama">Nama Supir</label>
-            <input type="text" id="nama" name="nama" required>
+        <form action="proses-edit-akun-supir.php" method="POST">
+            <label for="nama">Nama Tender</label>
+            <input type="text" id="nama" name="nama" required value="Tender 1">
 
             <label for="telpon">No. Telpon</label>
-            <input type="text" id="telpon" name="telpon" required>
+            <input type="text" id="telpon" name="telpon" required value="0895410035090">
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required value="tender1@example.com">
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+            <label for="jenis">Jenis </label>
+            <input type="text" id="jenis" name="Jenis" required>
 
-            <label for="kendaraan">Jenis Kendaraan</label>
-            <select id="kendaraan" name="kendaraan" required>
-                <option value="">Pilih Jenis Kendaraan</option>
-                <option value="Trailer">Trailer</option>
-                <option value="Tronton">Tronton</option>
-                <option value="Box">Box</option>
-                <option value="Highbed">Highbed</option>
-                <option value="Wingbox">Wingbox</option>
-            </select>
+            <label for="telpon">NPWP</label>
+            <input type="text" id="npwp" name="npwp" required value="0895410035090">
 
-            <button type="submit" class="submit-button">Buat Akun</button>
+            <label for="alamat">Alamat</label>
+            <input type="text" id="alamat" name="alamat" required value="Jl. Contoh Alamat">
+
+            <div class="form-buttons">
+                <button type="submit" class="submit-button">Simpan</button>
+                <button type="button" class="cancel-button" onclick="window.history.back()">Batal</button>
+            </div>
         </form>
     </div>
 </div>

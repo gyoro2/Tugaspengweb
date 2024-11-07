@@ -60,10 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <li><img src="cb.png" alt=""><a href="seleksivendor.php">Seleksi Vendor</a></li>
             <li><img src="sh.png" alt=""><a href="negoisasi.php">Negoisasi</a></li>
             <li><img src="undo.png" alt=""><a href="kontroltender.php">Kontrol Tender</a></li>
+            <li><img src="bat.png" alt=""><a href="pembuatantender.php">Buat Akun Tender</a></li>
             <li><img src="as.png" alt=""><a href="buatakunsupir.php">Buat Akun Supir</a></li>
             <li><img src="file.png" alt=""><a href="datakendaraan.php">Data Kendaraan</a></li>
             <li><img src="alert.png" alt=""><a href="daftarkomplain.php">Daftar Komplain</a></li>
-            <li><img src="bat.png" alt=""><a href="pembuatantender.php">Buat Akun Tender</a></li>
         </ul>
     </div>
 </header>
@@ -78,16 +78,105 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 
+    <!-- Daftar Akun Supir -->
 <div class="akun">
+    <h2>Daftar Akun Tender</h2>
+    
+    <!-- Tombol Tambah Akun -->
+    <div class="button-container">
+        <button class="tambah-button" onclick="window.location.href='buatakuntender.php'">Tambah Akun</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Lengkap</th>
+                    <th>No Telpon</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tender 1</td>
+                    <td>0895410035080</td>
+                    <td>tender1@example.com</td>
+                    <td>tender0101</td>
+                    <td>
+                        <button class="edit-button" onclick="window.location.href='editakuntender.php'">Edit</button>
+                        <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
+                        <button class="cek-button" onclick="openModal()">Cek</button>
+                    </td>
+                </tr>
+                <!-- Tambahkan baris data tender lainnya -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Pop-up untuk Cek Akun tender -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3>Detail Tender</h3>
+        <p>Nama Tender: Tender 1</p>
+        <p>No Telpon: 089510035080</p>
+        <p>Email: tender1@example.com</p>
+        <p>Jenis : Makanan</p>
+        <p>NPWP : 123.4567899</p>
+        <p>Alamat: Bandung</p>
+        <div class="modal-buttons">
+            <button class="close-button" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pop-up untuk Hapus Akun Supir -->
+<div class="delete-modal" id="delete-modal">
+    <div class="delete-modal-content">
+        <p>Hapus data supir?</p>
+        <div class="delete-modal-buttons">
+            <button class="confirm-button" onclick="deleteSupir()">Hapus</button>
+            <button class="cancel-button" onclick="closeDeleteModal()">Batal</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    function openDeleteModal() {
+        document.getElementById('delete-modal').style.display = 'flex';
+    }
+
+    function closeDeleteModal() {
+        document.getElementById('delete-modal').style.display = 'none';
+    }
+
+    function deleteSupir() {
+        alert("Data tender dihapus");
+        closeDeleteModal();
+    }
+</script>
+
+
+<!-- <div class="akuntender">
         <h2>Buat Akun Tender Baru</h2>
-        <!-- Menampilkan pesan jika ada -->
+         Menampilkan pesan jika ada 
         <?php if (isset($error_message)): ?>
             <p style="color: red;"><?php echo $error_message; ?></p>
         <?php elseif (isset($success_message)): ?>
             <p style="color: green;"><?php echo $success_message; ?></p>
         <?php endif; ?>
 
-        <!-- Form untuk membuat akun tender -->
+         Form untuk membuat akun tender 
         <form method="POST" action="buatakuntender.php">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br><br>
@@ -117,6 +206,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $conn->close(); // Tutup koneksi database
         ?>
         </ul>
-    </div>
+    </div> -->
 </body>
 </html>
