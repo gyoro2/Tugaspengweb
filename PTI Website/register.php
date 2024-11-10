@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($stmt->execute()) {
                 // Redirect ke halaman login setelah registrasi berhasil
+                echo "<script>alert('Akun Berhasil Dibuat!');</script>";
                 header("Location: index.php");
                 exit(); // Menghentikan eksekusi kode lebih lanjut
             } else {
