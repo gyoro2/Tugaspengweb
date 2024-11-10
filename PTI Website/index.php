@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Arahkan pengguna berdasarkan role
                 if ($row['role'] == 'calon_tender') {
-                    echo "<script>window.location.href = 'DashboardCalonVendor.php';</script>";
+                    echo "<script>window.location.href = 'pendaftaran.php';</script>";
                 } elseif ($row['role'] == 'tender') {
                     echo "<script>window.location.href = 'DashboardVendor.php';</script>";
                 }
