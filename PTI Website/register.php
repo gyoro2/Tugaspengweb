@@ -60,10 +60,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p style="text-align: center;">Already have an account? <a href="index.php">Login</a></p>
     </form>
 
-    <?php
-    if (isset($error)) {
-        echo "<p style='color:red;'>$error</p>";
-    }
-    ?>
+    <?php if (isset($error)) { ?>
+        <script>
+            alert("<?php echo $error; ?>");
+        </script>
+    <?php } ?>
 </body>
 </html>
