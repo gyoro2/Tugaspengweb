@@ -12,10 +12,9 @@
 <div class="sidebar">
     <ul>
         <h2>SIVASAK</h2>
-        <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
-        <li><img src="vendor.png" alt=""><a href="pendaftaran_vendor.php">Pendaftaran Vendor</a></li>
-        <li><img src="questioner.png" alt=""><a href="questioner_supplier.php">Questioner Supplier</a></li>
-        <li><img src="announcement.png" alt=""><a href="pengumuman_pemenang.php">Pengumuman Pemenang Vendor</a></li>
+        <li><img src="register.png" alt=""><a href="pendaftaran.php">Pendaftaran</a></li>
+        <li><img src="questioner.png" alt=""><a href="questioner.php">Questioner</a></li>
+        <li><img src="announcement.png" alt=""><a href="pengumumanpemenang.php">Pengumuman Pemenang Tender</a></li>
     </ul>
 </div>
 
@@ -23,7 +22,7 @@
 <div class="navbar">
     <div class="menu">
         <ul>
-            <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
+            <li><a href="#">Calon Vendor</a><img src="bp.png" alt=""></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>

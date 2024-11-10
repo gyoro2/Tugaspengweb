@@ -28,7 +28,7 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 150px;
     height: 100vh;
     background-color: #0A397F;
     position: fixed; /* Agar sidebar tetap di posisi yang diinginkan */
@@ -740,3 +740,36 @@ form button:hover {
     border-radius: 6px;
 }
 
+/* Content Area */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.announcement-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.announcement-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.announcement-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.announcement-container table td {
+    padding: 8px 0;
+    vertical-align: top;
+}
+
+.announcement-container table td:first-child {
+    width: 30%;
+    font-weight: bold;
+}
