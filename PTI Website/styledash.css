@@ -152,7 +152,7 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-.edit-button, .cek-button, .delete-button {
+.edit-button, .cek-button, .delete-button, .accept-button{
     background-color: #3498db;
     color: white;
     padding: 8px 12px;
@@ -172,6 +172,10 @@ tr:hover {
 
 .delete-button {
     background-color: #e74c3c;
+}
+
+.accept-button {
+    background-color: #27ae60;
 }
 
 .edit-button:hover {
@@ -515,8 +519,9 @@ form button:hover {
 
 /* Dashboard Vendor */
 .vendor-info {
-    margin-left: 240px;
     padding: 20px;
+    align-content: center;
+    margin-right: 140px;
 }
 
 .vendor-info h2 {

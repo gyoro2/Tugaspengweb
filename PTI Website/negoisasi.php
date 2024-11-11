@@ -50,6 +50,7 @@
                         <td>01/01/2024</td>
                         <td>Judul 1</td>
                         <td>
+                            <button class="accept-button" onclick="acceptTender()">Terima</button>
                             <button class="edit-button" onclick="openModal()">Cek</button>
                             <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
                         </td>
@@ -106,6 +107,10 @@
             alert("Data tender dihapus");
             closeDeleteModal();
         }
+
+        function acceptTender() {
+        alert("Tender diterima");
+        closeDeleteModal();}
     </script>
 
 </body>

@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <!-- Daftar Akun Supir -->
+    <!-- Daftar Akun Tender -->
     <div class="akun">
         <h2>Edit Akun Tender</h2>
         <div class="form-container">

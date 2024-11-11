@@ -27,8 +27,8 @@
 </div>
 
 <!-- Main Content -->
-<div class="content">
-    <div class="announcement-container">
+<div class="main-content">
+    <div class="vendor-info">
         <h2>Pemenang Tender</h2>
         <table>
             <tr>
