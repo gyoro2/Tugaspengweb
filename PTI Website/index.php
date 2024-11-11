@@ -23,8 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($password, $row['password'])) {
                 // Simpan informasi user dalam session
                 $_SESSION['username'] = $row['username'];
-                $_SESSION['role'] = $row['role']; // Simpan role juga jika diperlukan
-                header("Location: dashboard.php"); // Arahkan ke halaman dashboard setelah login
+                $_SESSION['role'] = $row['role'];
+
+                // Menampilkan pesan "Login Berhasil"
+                echo "<script>alert('Login Berhasil!');</script>";
+
+                // Arahkan pengguna berdasarkan role
+                if ($row['role'] == 'calon_tender') {
+                    echo "<script>window.location.href = 'pendaftaran.php';</script>";
+                } elseif ($row['role'] == 'tender') {
+                    echo "<script>window.location.href = 'DashboardVendor.php';</script>";
+                }
                 exit();
             } else {
                 $error = "Password salah!";
