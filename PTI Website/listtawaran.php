@@ -73,7 +73,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
             <td>1/1/1999</td>
             <td>31/31/1999</td>
                     <td>
-                        <button class="edit-button" onclick="window.location.href='editvendor.php'">Edit</button>
+                        <button class="edit-button" onclick="window.location.href='edittawaran.php'">Edit</button>
                         <button class="cek-button" onclick="openModal()">Cek</button>
                         <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
                     </td>
@@ -81,6 +81,11 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
         </table>
     </div>
 </div>
+
+<!-- Tombol Tambah Akun -->
+<div class="button-container">
+        <button class="tambah-button" onclick="window.location.href='buattawaran.php'">Tambah Tawaran</button>
+    </div>
 
 <!-- Modal Pop-up untuk Cek Vendor -->
 <div class="modal" id="modal">
