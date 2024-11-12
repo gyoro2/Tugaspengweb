@@ -51,7 +51,7 @@
     <br><br>
 
     <div class="form-buttons">
-                <button type="submit" class="submit-button">Simpan</button>
+                <button type="submit" class="submit-button" onclick="window.location.href='listtawaran.php' " >Simpan</button>
                 <button type="button" class="cancel-button" onclick="window.history.back()">Batal</button>
             </div>
 </form>
