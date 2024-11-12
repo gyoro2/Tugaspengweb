@@ -38,16 +38,16 @@
 <div class="main-content vendor">
 <h2>Edit Akun Supir</h2>
 <form action="proses-edit-akun-supir.php" method="POST">
-    <label for="nama">Deskripsi</label>
-    <input type="text" id="nama" name="nama" required value="Dibutuhkan Air Mineral">
+    <label for="deskripsi">Deskripsi</label>
+    <input type="text" id="deskripsi" name="deskripsi" required value="Dibutuhkan Air Mineral">
     <br><br>
 
-    <label for="telpon">Masa Berlaku</label>
-    <input type="text" id="telpon" name="telpon" required value="1/1/1999">
+    <label for="berlaku">Masa Berlaku</label>
+    <input type="text" id="berlaku" name="berlaku" required value="1/1/1999">
     <br><br>
 
-    <label for="email">Masa Berakhir</label>
-    <input type="email" id="email" name="email" required value="31/31/1999">
+    <label for="berakhir">Masa Berakhir</label>
+    <input type="text" id="berlaku" name="berlaku" required value="31/31/1999">
     <br><br>
 
     <div class="form-buttons">
