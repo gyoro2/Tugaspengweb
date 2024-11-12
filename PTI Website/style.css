@@ -29,7 +29,7 @@ h2 {
 /* Gaya form */
 .form {
     width: 100%;
-    max-width: 400px; /* Mengatur lebar maksimum form */
+    max-width: 500px; /* Mengatur lebar maksimum form */
     padding: 30px;
     background-color: #CACDED;
     border-radius: 10px;
@@ -38,7 +38,8 @@ h2 {
 
 /* Gaya input teks */
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="text"] {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
