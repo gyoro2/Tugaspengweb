@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         // Jika berhasil, simpan status sukses di session dan arahkan ke halaman register kembali
         $_SESSION['register_success'] = true;
-        header("Location: index.php"); // Ubah ke 'register.php' agar halaman tetap di register
+        header("Location: register.php"); // Ubah ke 'register.php' agar halaman tetap di register
         exit();
     } else {
         // Jika gagal
@@ -36,26 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS untuk pop-up notifikasi */
-        .popup {
-            display: none; /* Mulai dalam kondisi tidak terlihat */
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #fff;
-            color: #333;
-            padding: 15px 30px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            font-size: 16px;
-            z-index: 1000;
-        }
-        .popup.success {
-            border-left: 5px solid green;
-        }
-    </style>
 </head>
 <body>
     <!-- Pop-up Notifikasi -->
