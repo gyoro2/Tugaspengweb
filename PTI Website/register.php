@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         // Jika berhasil, simpan status sukses di session dan arahkan ke halaman register kembali
         $_SESSION['register_success'] = true;
-        header("Location: index.php");
+        header("Location: index.php"); // Ubah ke 'register.php' agar halaman tetap di register
         exit();
     } else {
         // Jika gagal
@@ -62,17 +62,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div id="popup" class="popup success">
         ✅ Akun anda sudah terdaftar, silahkan login.
     </div>
-
-    <!-- Form Register -->
+    <div class="container">
     <h2>Create Account</h2>
-    <form method="POST" action="register.php">
-        <input type="username" name="username" required placeholder="Username"><br>
-        <input type="email" name="email" required placeholder="Email"><br>
-        <input type="password" name="password" required placeholder="Password"><br>
-        <input type="password" name="confirm_password" required placeholder="Confirm password"><br>
-        <input type="submit" value="Create Account">
-        <p>Already have an account? <a href="index.php">Login</a></p>
-    </form>
+    <div class="form">
+        <form method="POST" action="">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <input type="submit" value="Create Account">
+            <p>Already have an account? <a href="index.php">Login</a></p>
+        </form>
+    </div>
 
     <script>
         // Cek apakah ada notifikasi sukses di session

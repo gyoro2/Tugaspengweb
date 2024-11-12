@@ -9,15 +9,25 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #002966; /* Warna latar belakang */
+}
+
 /* Gaya judul */
 h2 {
-    text-align : center;
+    text-align: center;
     color: white;
     margin-top: 0;
+    margin-bottom: 20px; /* Jarak antara judul dan form */
 }
 
 /* Gaya form */
-form {
+.form {
     width: 100%;
     max-width: 400px; /* Mengatur lebar maksimum form */
     padding: 30px;
@@ -28,9 +38,7 @@ form {
 
 /* Gaya input teks */
 form input[type="email"],
-form input[type="password"],
-form input[type="text"],
-form input[type="username"] {
+form input[type="password"] {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
@@ -75,20 +83,10 @@ form p a:hover {
     text-decoration: underline;
 }
 
-.popup {
-    display: none; /* Mulai dalam kondisi tidak terlihat */
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    color: #333;
-    padding: 15px 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
-    z-index: 1000;
-}
-.popup.success {
-    border-left: 5px solid green;
+/* Gaya untuk pesan error */
+.error {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
 }

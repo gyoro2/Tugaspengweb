@@ -50,22 +50,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>Login</h2>
-    <form method="POST" action="">
-        <input type="email" name="email" required placeholder="Email"><br>
-        <input type="password" name="password" required placeholder="Password"><br>
-        <input type="submit" value="Login">
-        <p style="text-align: center;">Don't have an account? <a href="register.php">Register</a></p>
-    </form>
-
-    <?php
-    if (isset($error)) {
-        echo "<p style='color:red;'>$error</p>";
-    }
-    ?>
+<div class="container">
+    <h2>Login</h2>
+    <div class="form">
+        <form method="POST" action="">
+            <input type="email" name="email" required placeholder="Email"><br>
+            <input type="password" name="password" required placeholder="Password"><br>
+            <input type="submit" value="Login">
+            <p>Don't have an account? <a href="register.php">Register</a></p>
+        </form>
+        <?php
+        if (isset($error)) {
+            echo "<p class='error'>$error</p>";
+        }
+        ?>
+    </div>
+</div>
 </body>
 </html>
-
-<?php
-$conn->close(); // Menutup koneksi di sini
-?>
