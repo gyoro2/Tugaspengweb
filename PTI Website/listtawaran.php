@@ -10,7 +10,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,5 +81,53 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
         </table>
     </div>
 </div>
-</h>
+
+<!-- Modal Pop-up untuk Cek Vendor -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3>Detail Tawaran</h3>
+        <p>Judul Tawaran : Dibutuhkan Air Mineral</p>
+        <p>Jenis Barang : Minuman</p>
+        <p>Range Harga : RP 1.000.000</p>
+        <p>Masa Berlaku : 1/1/1999</p>
+        <p>Masa Berakhir : 31/31/1999</p>
+        <div class="modal-buttons">
+            <button class="close-button" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pop-up untuk Hapus Vendor -->
+<div class="delete-modal" id="delete-modal">
+    <div class="delete-modal-content">
+        <p>Hapus data tawaran?</p>
+        <div class="delete-modal-buttons">
+            <button class="delete-button" onclick="deleteTender()">Hapus</button>
+            <button class="close-button" onclick="closeDeleteModal()">Batal</button>
+        </div>
+    </div>
+</div>
+<script>
+    function openModal() {
+        document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    function openDeleteModal() {
+        document.getElementById('delete-modal').style.display = 'flex';
+    }
+
+    function closeDeleteModal() {
+        document.getElementById('delete-modal').style.display = 'none';
+    }
+
+    function deleteVendor() {
+        alert("Tawaran dihapus");
+        closeDeleteModal();
+    }
+</script>
+
 </html>
