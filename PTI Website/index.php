@@ -62,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label>
                 <input type="checkbox" onclick="togglePassword()"> Show Password
             </label><br>
-
             <input type="submit" value="Login">
             <p>Don't have an account? <a href="register.php">Register</a></p>
         </form>
