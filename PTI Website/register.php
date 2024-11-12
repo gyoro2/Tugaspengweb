@@ -1,44 +1,31 @@
 <?php
 session_start();
-include 'database.php'; // Menghubungkan dengan file database.php
+include 'database.php';
 
+// Proses registrasi
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil data dari form
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-    // Cek apakah password dan konfirmasi password sama
-    if ($password !== $confirm_password) {
-        $error = "Password dan konfirmasi password tidak cocok!";
+    // Query untuk menyimpan data ke database
+    $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $username, $email, $password);
+
+    if ($stmt->execute()) {
+        // Jika berhasil, simpan status sukses di session dan arahkan ke halaman register kembali
+        $_SESSION['register_success'] = true;
+        header("Location: index.php");
+        exit();
     } else {
-        // Hash password untuk keamanan
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-        // Cek apakah email atau username sudah ada di database
-        $stmt_check = $conn->prepare("SELECT * FROM users WHERE email = ? OR username = ?");
-        $stmt_check->bind_param("ss", $email, $username);
-        $stmt_check->execute();
-        $result = $stmt_check->get_result();
-
-        if ($result->num_rows > 0) {
-            $error = "Email atau Username sudah digunakan. Silakan pilih yang lain.";
-        } else {
-            // Simpan user baru ke database dengan role sebagai calon_tender
-            $role = 'calon_tender'; // Role untuk calon tender
-            $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $username, $email, $hashed_password, $role);
-
-            if ($stmt->execute()) {
-                // Redirect ke halaman login setelah registrasi berhasil
-                echo "<script>alert('Akun Berhasil Dibuat!');</script>";
-                header("Location: index.php");
-                exit(); // Menghentikan eksekusi kode lebih lanjut
-            } else {
-                $error = "Terjadi kesalahan: " . $stmt->error;
-            }
-        }
+        // Jika gagal
+        echo "Error: " . $stmt->error;
     }
+
+    $stmt->close();
+    $conn->close();
 }
 ?>
 
@@ -47,24 +34,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrasi</title>
+    <title>Register</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk pop-up notifikasi */
+        .popup {
+            display: none; /* Mulai dalam kondisi tidak terlihat */
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            z-index: 1000;
+        }
+        .popup.success {
+            border-left: 5px solid green;
+        }
+    </style>
 </head>
 <body>
+    <!-- Pop-up Notifikasi -->
+    <div id="popup" class="popup success">
+        ✅ Akun anda sudah terdaftar, silahkan login.
+    </div>
+
+    <!-- Form Register -->
     <h2>Create Account</h2>
-    <form method="POST" action="">
+    <form method="POST" action="register.php">
         <input type="username" name="username" required placeholder="Username"><br>
         <input type="email" name="email" required placeholder="Email"><br>
         <input type="password" name="password" required placeholder="Password"><br>
-        <input type="password" name="confirm_password" required placeholder="Confirm Password"><br>
+        <input type="password" name="confirm_password" required placeholder="Confirm password"><br>
         <input type="submit" value="Create Account">
-        <p style="text-align: center;">Already have an account? <a href="index.php">Login</a></p>
+        <p>Already have an account? <a href="index.php">Login</a></p>
     </form>
 
-    <?php if (isset($error)) { ?>
-        <script>
-            alert("<?php echo $error; ?>");
-        </script>
-    <?php } ?>
+    <script>
+        // Cek apakah ada notifikasi sukses di session
+        <?php if (isset($_SESSION['register_success']) && $_SESSION['register_success']): ?>
+            // Tampilkan popup
+            document.getElementById('popup').style.display = 'block';
+
+            // Sembunyikan popup setelah 3 detik
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'none';
+            }, 3000);
+
+            <?php unset($_SESSION['register_success']); // Hapus session setelah ditampilkan ?>
+        <?php endif; ?>
+    </script>
 </body>
 </html>

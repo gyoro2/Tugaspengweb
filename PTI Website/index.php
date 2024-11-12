@@ -23,17 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($password, $row['password'])) {
                 // Simpan informasi user dalam session
                 $_SESSION['username'] = $row['username'];
-                $_SESSION['role'] = $row['role'];
-
-                // Menampilkan pesan "Login Berhasil"
-                echo "<script>alert('Login Berhasil!');</script>";
-
-                // Arahkan pengguna berdasarkan role
-                if ($row['role'] == 'calon_tender') {
-                    echo "<script>window.location.href = 'pendaftaran.php';</script>";
-                } elseif ($row['role'] == 'tender') {
-                    echo "<script>window.location.href = 'DashboardVendor.php';</script>";
-                }
+                $_SESSION['role'] = $row['role']; // Simpan role juga jika diperlukan
+                header("Location: dashboard.php"); // Arahkan ke halaman dashboard setelah login
                 exit();
             } else {
                 $error = "Password salah!";
@@ -59,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Login</h2>
+<h2>Login</h2>
     <form method="POST" action="">
         <input type="email" name="email" required placeholder="Email"><br>
         <input type="password" name="password" required placeholder="Password"><br>
@@ -67,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p style="text-align: center;">Don't have an account? <a href="register.php">Register</a></p>
     </form>
 
-    <?php if (isset($error)) { ?>
-        <script>
-            alert("<?php echo $error; ?>");
-        </script>
-    <?php } ?>
+    <?php
+    if (isset($error)) {
+        echo "<p style='color:red;'>$error</p>";
+    }
+    ?>
 </body>
 </html>
 
