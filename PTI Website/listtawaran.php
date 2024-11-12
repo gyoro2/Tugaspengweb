@@ -1,10 +1,12 @@
 <?php
-// session_start(); // Un-comment this line if sessions are needed
-include 'database.php'; // Assumes you have a database connection file
+session_start();
+include 'database.php'; // Pastikan ini adalah koneksi ke database
 
-// Fetching data from database
-$sql = "SELECT * FROM tawaran"; // Replace "tawaran" with your actual table name
-$result = $conn->query($sql);
+// Cek apakah user adalah admin
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
+    header('Location: index.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,10 +15,10 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Tawaran</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link ke file CSS Anda -->
+    <link rel="stylesheet" href="styledash.css">
 </head>
 
-<body>
+<header>
     <!-- Sidebar -->
     <div class="sidebar">
         <ul>
@@ -32,6 +34,7 @@ $result = $conn->query($sql);
             <li><img src="alert.png" alt=""><a href="daftarkomplain.php">Daftar Komplain</a></li>
         </ul>
     </div>
+</header>
 
     <!-- Main Content -->
     <div class="navbar">
@@ -43,10 +46,18 @@ $result = $conn->query($sql);
     </div>
 </div>
 
+<div class="main-content vendor">
+    <h2>Daftar Tawaran</h2>
+
+<div class="search-container">
+        <input type="text" placeholder="Cari Vendor">
+        <button class="search-button">Cari</button>
+    </div>
+
+    <div class="table-container">
         <table>
             <thead>
                 <tr>
-                    <th><input type="checkbox"></th>
                     <th>Judul Tawaran</th>
                     <th>Jenis Barang</th>
                     <th>Range Harga</th>
@@ -56,29 +67,19 @@ $result = $conn->query($sql);
                 </tr>
             </thead>
             <tbody>
-                <?php
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>
-                                <td><input type='checkbox'></td>
-                                <td>{$row['judul_tawaran']}</td>
-                                <td>{$row['jenis_barang']}</td>
-                                <td>Rp" . number_format($row['range_harga'], 0, ',', '.') . "</td>
-                                <td>" . date('d/m/Y', strtotime($row['masa_berlaku'])) . "</td>
-                                <td>" . date('d/m/Y', strtotime($row['masa_berakhir'])) . "</td>
-                                <td class='action-buttons'>
-                                    <a href='edit.php?id={$row['id']}' class='btn btn-edit'>✏️</a>
-                                    <a href='delete.php?id={$row['id']}' class='btn btn-delete'>🗑️</a>
-                                    <a href='cek.php?id={$row['id']}' class='btn btn-check'>Cek</a>
-                                </td>
-                              </tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='7'>Tidak ada data tawaran.</td></tr>";
-                }
-                ?>
+            <td>Dibutuhkan Air Mineral</td>
+            <td>Minuman</td>
+            <td>RP 1.000.000</td>
+            <td>1/1/1999</td>
+            <td>31/31/1999</td>
+                    <td>
+                        <button class="edit-button" onclick="window.location.href='editvendor.php'">Edit</button>
+                        <button class="cek-button" onclick="openModal()">Cek</button>
+                        <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
+                    </td>
             </tbody>
         </table>
     </div>
-</body>
+</div>
+</h>
 </html>

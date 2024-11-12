@@ -71,13 +71,6 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Vendor B</td>
-                    <td>
-                        <button class="edit-button" onclick="window.location.href='editvendor.php'">Edit</button>
-                        <button class="cek-button" onclick="openModal()">Cek</button>
-                        <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
-                    </td>
-                </tr>
                 <!-- Tambahkan baris data vendor lainnya -->
             </tbody>
         </table>
