@@ -80,7 +80,10 @@
                             <td>Jakarta</td>
                             <td>5726958205</td>
                             <td>Ade Wijaya</td>
-                            <td><button class="btn-check">Cek</button> <button class="btn-delete">Hapus</button></td>
+                            <td>
+                            <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
+                            <button class="cek-button" onclick="window.location.href='detaildatacalonvendor.php' ">Cek</button>
+                        </td>
                         </tr>
                         <!-- Tambahkan lebih banyak data sesuai kebutuhan -->
                     </tbody>
@@ -89,30 +92,26 @@
     </div>
 
     <script>
-        function searchData() {
-    const searchInput = document.getElementById("search").value.toLowerCase();
-    const rows = document.querySelectorAll("tbody tr");
-
-    rows.forEach(row => {
-        const cells = row.getElementsByTagName("td");
-        let match = false;
-        
-        for (let i = 0; i < cells.length - 1; i++) {
-            if (cells[i].innerText.toLowerCase().includes(searchInput)) {
-                match = true;
-                break;
-            }
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
         }
 
-        row.style.display = match ? "" : "none";
-    });
-}
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
 
-function logout() {
-    alert("Logging out...");
-    // Tambahkan kode logout yang sesuai dengan aplikasi Anda
-}
+        function openDeleteModal() {
+            document.getElementById('delete-modal').style.display = 'flex';
+        }
 
+        function closeDeleteModal() {
+            document.getElementById('delete-modal').style.display = 'none';
+        }
+
+        function deleteVendor() {
+            alert("Data vendor dihapus");
+            closeDeleteModal();
+        }
     </script>
 </body>
 </html>
