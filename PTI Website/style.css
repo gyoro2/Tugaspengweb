@@ -17,6 +17,13 @@ body {
     min-height: 100vh;
 }
 
+.logo {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
 /* Gaya judul */
 h2 {
     text-align: center;
@@ -33,8 +40,7 @@ h2 {
 
 /* Gaya form */
 .form {
-    width: 100%;
-    max-width: 500px; /* Mengatur lebar maksimum form */
+    width: 350px;
     padding: 30px;
     background-color: #CACDED;
     border-radius: 10px;
@@ -48,29 +54,42 @@ form input[type="text"] {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    border: 1px solid #1a237e;
-    border-radius: 25px;
-    font-size: 16px;
+    border: 1px solid #AA9B9B;
+    border-radius: 25px;    
+    font-size: 12px;
     box-sizing: border-box;
+    background-color: transparent;
 }
 
 /* Gaya tombol submit */
 form input[type="submit"] {
     width: 100%;
+    max-width: 250px;
     padding: 12px;
     margin-top: 20px;
-    background-color: #1565c0;
+    background-color: #28293D;
     color: #ffffff;
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 form input[type="submit"]:hover {
-    background-color: #0d47a1;
+    background-color: #35364f;
 }
+
+/* Gaya Label Cek Password */
+.form label[for="password"] {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #000000;
+}
+
 
 /* Gaya link pendaftaran */
 form p {
