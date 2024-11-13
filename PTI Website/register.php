@@ -1,4 +1,4 @@
-<div?php
+<?php
     session_start();
     include 'database.php';
 
@@ -37,6 +37,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="popup" class="popup success">
         ✅ Akun anda sudah terdaftar, silahkan login.

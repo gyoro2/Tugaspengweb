@@ -29,7 +29,7 @@
 </div>
 
 <!-- Daftar Tawaran Section -->
-<div class=main-content"">   
+<div class="main-content">   
     <div class="offer-list">
         <h2>Daftar Tawaran</h2>
         <div class="search-bar">
@@ -44,7 +44,7 @@
                         <th>Jenis Barang</th>
                         <th>Range Harga</th>
                         <th>Masa Berlaku</th>
-                        <th>Masa Berakhir</th>
+                        <th>Deskripsi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -56,7 +56,7 @@
                         <td>Alat Tulis</td>
                         <td>Rp1.000.000 - Rp5.000.000</td>
                         <td>25/05/2023</td>
-                        <td>25/06/2023</td>
+                        <td>Conctoh</td>
                         <td><a href="detailtawaran.php"><button class="apply-btn">Cek</button></a></td>
                     </tr>
                     <tr>
@@ -65,7 +65,7 @@
                         <td>Peralatan Medis</td>
                         <td>Rp5.000.000 - Rp10.000.000</td>
                         <td>01/06/2023</td>
-                        <td>01/07/2023</td>
+                        <td>contoh</td>
                         <td><a href="detailtawaran.php"><button class="apply-btn">Cek</button></a></td>
                     </tr>
                     <!-- Add more rows as needed -->
