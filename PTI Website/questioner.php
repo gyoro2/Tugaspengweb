@@ -10,12 +10,13 @@
 
 <!-- Sidebar -->
 <div class="sidebar">
-    <h2>SIVASAK</h2>
+    
     <ul>
-        <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
-        <li><img src="vendor.png" alt=""><a href="pendaftaran_vendor.php">Pendaftaran Vendor</a></li>
-        <li><img src="questioner.png" alt=""><a href="questioner_supplier.php">Questioner Supplier</a></li>
-        <li><img src="announcement.png" alt=""><a href="pengumuman_pemenang.php">Pengumuman Pemenang Vendor</a></li>
+    <h2>SIVASAK</h2>
+    <li><img src="pb.png" alt=""><a href="pendaftaran.php">Pendaftaran Vendor</a></li>
+        <li><img src="file.png" alt=""><a href="questioner.php">Questioner</a></li>
+        <li><img src="sh.png" alt=""><a href="pengumumanpemenang.php">Pengumuman Pemenang Tender</a></li>
+    </ul>
     </ul>
 </div>
 
