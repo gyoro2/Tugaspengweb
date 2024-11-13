@@ -105,17 +105,15 @@ body {
 }
 
 .button-container {
-    align-items: left;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-    background-color: #0A397F;
-    margin-top: 10px;
 }
 
-.button-isi {
-    align-items: left;
+.button-container-tawaran {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-    background-color: #0A397F;
-    margin-top: 10px;
 }
 
 .tambah-button {

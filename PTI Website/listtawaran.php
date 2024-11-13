@@ -49,6 +49,10 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
 <div class="main-content vendor">
     <h2>Daftar Tawaran</h2>
 
+    <div class="button-container-tawaran">
+        <button class="tambah-button" onclick="window.location.href='buattawaran.php'">Tambah Tawaran</button>
+    </div>
+
 <div class="search-container">
         <input type="text" placeholder="Cari Vendor">
         <button class="search-button">Cari</button>
@@ -83,9 +87,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
 </div>
 
 <!-- Tombol Tambah Akun -->
-<div class="button-container">
-        <button class="tambah-button" onclick="window.location.href='buattawaran.php'">Tambah Tawaran</button>
-    </div>
+
 
 <!-- Modal Pop-up untuk Cek Vendor -->
 <div class="modal" id="modal">

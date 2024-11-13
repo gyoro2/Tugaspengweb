@@ -70,27 +70,13 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
                     <td>Jl. Manggis Raya</td>
                     <td>
                         <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
-                        <button class="cek-button" onclick="openModal()">Cek</button>
+                        <button class="cek-button" onclick="window.location.href='cekseleksivendor.php' ">Cek</button>
                     </td>
                 </tr>
                 <tr>
                 <!-- Tambahkan baris data vendor lainnya -->
             </tbody>
         </table>
-    </div>
-</div>
-
-<!-- Modal Pop-up untuk Cek Vendor -->
-<div class="modal" id="modal">
-    <div class="modal-content">
-        <h3>Detail Vendor</h3>
-        <p>Nama Perusahaan: Vendor A</p>
-        <p>No Telepon: 08123456789</p>
-        <p>Email: vendorA@example.com</p>
-        <p>Alamat: Jl. Contoh Alamat</p>
-        <div class="modal-buttons">
-            <button class="close-button" onclick="closeModal()">Tutup</button>
-        </div>
     </div>
 </div>
 
