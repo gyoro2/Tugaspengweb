@@ -81,11 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Daftar Akun Supir -->
 <div class="akun">
     <h2>Daftar Akun Tender</h2>
-    
-    <!-- Tombol Tambah Akun -->
-    <div class="button-container">
-        <button class="tambah-button" onclick="window.location.href='buatakuntender.php'">Tambah Akun</button>
-    </div>
 
     <div class="table-container">
         <table>
@@ -113,6 +108,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <!-- Tambahkan baris data tender lainnya -->
             </tbody>
         </table>
+         <!-- Tombol Tambah Akun -->
+    <div class="button-container-tender">
+        <button class="tambah-button" onclick="window.location.href='buatakuntender.php'">Tambah Akun</button>
+    </div>
     </div>
 </div>
 

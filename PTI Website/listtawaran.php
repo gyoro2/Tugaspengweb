@@ -49,14 +49,16 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
 <div class="main-content vendor">
     <h2>Daftar Tawaran</h2>
 
+    <div class="wrapper">
     <div class="button-container-tawaran">
         <button class="tambah-button" onclick="window.location.href='buattawaran.php'">Tambah Tawaran</button>
     </div>
 
-<div class="search-container">
+    <div class="search-container-tawaran">
         <input type="text" placeholder="Cari Vendor">
         <button class="search-button">Cari</button>
     </div>
+</div>
 
     <div class="table-container">
         <table>

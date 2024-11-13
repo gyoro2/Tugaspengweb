@@ -110,10 +110,22 @@ body {
     margin-bottom: 20px;
 }
 
-.button-container-tawaran {
+.button-container-tender {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
+    margin-top: 10px;
     margin-bottom: 20px;
+}
+
+.button-container-tawaran, .search-container-tawaran{
+    display: flex;
+    align-items: right;
+}
+
+.wrapper {
+    display: flex;
+    align-items: right;
+    gap: 10px; /* Mengatur jarak antar elemen */
 }
 
 .tambah-button {
