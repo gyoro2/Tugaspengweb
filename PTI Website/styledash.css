@@ -384,7 +384,7 @@ tr:hover {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #34495e;
+    color: black;
 }
 
 .form-container input,
@@ -395,10 +395,19 @@ tr:hover {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23777" d="M7 10l5 5 5-5z"/></svg>'); /* Ikon panah ke bawah */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
 }
 
 .form-container select {
     appearance: none;
+}
+
+.form-container label[for]:after {
+    content: ' *'; /* Tanda bintang */
+    color: red; /* Warna bintang merah */
+    font-weight: bold;
 }
 
 .form-buttons {
