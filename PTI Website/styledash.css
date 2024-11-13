@@ -982,24 +982,27 @@ h2 {
 
 /* Table */
 table {
-    width: 100%;
+    width: 100%; /* Make the table occupy full width */
     border-collapse: collapse;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
+    margin: 20px 0; /* Adds spacing around the table */
+    font-size: 12px; /* Smaller font size */
 }
 
 table, th, td {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 10px;
-    font-size: 14px;
+    padding: 8px 12px; /* Adds more space around text for readability */
+    font-weight: normal; /* Makes text non-bold */
 }
 
 thead th {
     background-color: #e1e6f4;
     color: #333333;
-    font-weight: bold;
+    font-weight: normal; /* Non-bold header */
+    font-size: 12px; /* Consistent font size with table content */
+    text-align: center; /* Center align header text */
 }
 
 tbody tr:nth-child(odd) {
@@ -1015,6 +1018,14 @@ td img {
     width: 20px;
     height: 20px;
 }
+
+/* Optional: Add spacing around the table container */
+.table-container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 100%;
+}
+
 
 /* Footer */
 .footer {
@@ -1051,7 +1062,7 @@ td img {
     font-weight: 500;
 }
 
-/* Styling untuk dropdown */
+/* Dropdown style */
 .select-answer {
     width: 100%;
     padding: 10px;
@@ -1062,42 +1073,33 @@ td img {
     margin-bottom: 15px;
 }
 
-/* Styling untuk pilihan jawaban */
-.answer-option {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
+/* Styling untuk kontainer pertanyaan */
+.question {
     font-family: Arial, sans-serif;
     font-size: 14px;
     color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
-.answer-option input[type="radio"] {
-    margin-right: 10px;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    accent-color: #666; /* Warna checkbox sesuai gambar */
-}
-
-.answer-option label {
-    font-size: 14px;
-    color: #333;
-}
-
-/* Styling untuk field penjelasan */
-.explanation-field {
-    display: none; /* Default: hidden */
-    margin-left: 26px;
+/* Dropdown styling */
+.select-answer {
+    width: 100%;
+    padding: 10px;
     font-size: 14px;
     color: #666;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
-.explanation-field label {
+/* Placeholder untuk kolom penjelasan */
+.explanation-field {
+    display: none; /* Default: hidden */
+    margin-top: 8px;
     font-size: 14px;
-    color: #333;
-    display: inline-block;
-    margin-bottom: 5px;
 }
 
 .explanation-field textarea {
@@ -1112,8 +1114,8 @@ td img {
     font-style: italic;
 }
 
-/* Placeholder styling mirip dengan gambar */
+/* Placeholder styling untuk kolom penjelasan */
 .explanation-field textarea::placeholder {
-    font-style: normal;
     color: #bbb;
 }
+
