@@ -17,6 +17,7 @@
         <li><img src="cb.png" alt=""><a href="seleksivendor.php">Seleksi Vendor</a></li>
         <li><img src="sh.png" alt=""><a href="negoisasi.php">Negosiasi</a></li>
         <li><img src="undo.png" alt=""><a href="kontroltender.php">Kontrol Tender</a></li>
+        <li><img src="file.png" alt=""><a href="daftarquestioner.php">Questioner</a></li>
         <li><img src="bat.png" alt=""><a href="pembuatantender.php">Buat Akun Tender</a></li>
         <li><img src="as.png" alt=""><a href="buatakunsupir.php">Buat Akun Supir</a></li>
         <li><img src="file.png" alt=""><a href="datakendaraan.php">Data Kendaraan</a></li>
