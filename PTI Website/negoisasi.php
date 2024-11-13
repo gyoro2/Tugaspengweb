@@ -25,7 +25,7 @@
 </header>
 
 <body>
-<div class="navbar">
+    <div class="navbar">
         <div class="menu">
             <ul>
                 <li><a href="#">Admin</a><img src="bp.png" alt=""></li>

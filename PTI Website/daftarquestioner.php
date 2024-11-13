@@ -25,21 +25,20 @@
     </ul>
 </div>
 
-    <!-- Navbar -->
-<div class="navbar">
-    <div class="menu">
-        <ul>
-            <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
-            <li><a href="logout.php">Logout</a></li>
-        </ul>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="header-content">
+            <span>Admin</span>
+            <img src="user_icon.png" alt="Admin Icon">
+            <a href="logout.php" class="logout">Logout</a>
+        </div>
     </div>
-</div>
 
     <!-- Main Content Section -->
     <div class="content">
         
         <h2>Daftar Questioner</h2>
-        <button class="back-button">Kembali</button>
+     
         <div class="table-container">
         <table>
             <thead>
@@ -60,10 +59,51 @@
                     <td>Vendor 2</td>
                     <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
                 </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Vendor 3</td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Vendor 4</td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Vendor 5</td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Vendor 6</td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Vendor 7</td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Vendor 8</td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Vendor 9</td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Vendor 10</td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                </tr>
                 <!-- Tambahkan baris tambahan sesuai kebutuhan -->
             </tbody>
         </table>
     </div>
+    <button class="back-button">Kembali</button>
     </div>
 
     <!-- Footer Section -->

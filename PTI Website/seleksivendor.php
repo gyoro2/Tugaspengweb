@@ -17,9 +17,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     <title>Daftar Vendor</title>
     <link rel="stylesheet" href="styledash.css">
 </head>
-<body>
 
-<div class="sidebar">
+<header>
+    <div class="sidebar">
     <ul>
         <h2>SIVASAK</h2>
         <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
@@ -34,86 +34,87 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
         <li><img src="alert.png" alt=""><a href="daftarkomplain.php">Daftar Komplain</a></li>
     </ul>
 </div>
+</header>
 
-<div class="navbar">
-    <div class="menu">
-        <ul>
-            <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
-            <li><a href="logout.php">Logout</a></li>
-        </ul>
-    </div>
-</div>
-
-<!-- Daftar Vendor -->
-<div class="main-content vendor">
-    <h2>Seleksi Vendor</h2>
-
-    <!-- Search Bar -->
-    <div class="search-container">
-        <input type="text" placeholder="Cari Vendor">
-        <button class="search-button">Cari</button>
-    </div>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nama Perusahaan</th>
-                    <th>NIB Perusahaan</th>
-                    <th>Alamat Perusahaan</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Vendor A</td>
-                    <td>1234567890</td>
-                    <td>Jl. Manggis Raya</td>
-                    <td>
-                        <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
-                        <button class="cek-button" onclick="window.location.href='cekseleksivendor.php' ">Cek</button>
-                    </td>
-                </tr>
-                <tr>
-                <!-- Tambahkan baris data vendor lainnya -->
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<!-- Modal Pop-up untuk Hapus Vendor -->
-<div class="delete-modal" id="delete-modal">
-    <div class="delete-modal-content">
-        <p>Hapus data vendor?</p>
-        <div class="delete-modal-buttons">
-            <button class="confirm-button" onclick="deleteVendor()">Hapus</button>
-            <button class="cancel-button" onclick="closeDeleteModal()">Batal</button>
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
         </div>
     </div>
-</div>
 
-<script>
-    function openModal() {
-        document.getElementById('modal').style.display = 'flex';
-    }
+    <!-- Daftar Vendor -->
+    <div class="akun vendor">
+        <h2>Seleksi Vendor</h2>
 
-    function closeModal() {
-        document.getElementById('modal').style.display = 'none';
-    }
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Cari Vendor">
+            <button class="search-button">Cari</button>
+        </div>
 
-    function openDeleteModal() {
-        document.getElementById('delete-modal').style.display = 'flex';
-    }
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Perusahaan</th>
+                        <th>NIB Perusahaan</th>
+                        <th>Alamat Perusahaan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vendor A</td>
+                        <td>1234567890</td>
+                        <td>Jl. Manggis Raya</td>
+                        <td>
+                            <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
+                            <button class="cek-button" onclick="window.location.href='cekseleksivendor.php' ">Cek</button>
+                        </td>
+                    </tr>
+                    <tr>
+                    <!-- Tambahkan baris data vendor lainnya -->
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-    function closeDeleteModal() {
-        document.getElementById('delete-modal').style.display = 'none';
-    }
+    <!-- Modal Pop-up untuk Hapus Vendor -->
+    <div class="delete-modal" id="delete-modal">
+        <div class="delete-modal-content">
+            <p>Hapus data vendor?</p>
+            <div class="delete-modal-buttons">
+                <button class="confirm-button" onclick="deleteVendor()">Hapus</button>
+                <button class="cancel-button" onclick="closeDeleteModal()">Batal</button>
+            </div>
+        </div>
+    </div>
 
-    function deleteVendor() {
-        alert("Data vendor dihapus");
-        closeDeleteModal();
-    }
-</script>
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
 
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function openDeleteModal() {
+            document.getElementById('delete-modal').style.display = 'flex';
+        }
+
+        function closeDeleteModal() {
+            document.getElementById('delete-modal').style.display = 'none';
+        }
+
+        function deleteVendor() {
+            alert("Data vendor dihapus");
+            closeDeleteModal();
+        }
+    </script>
 </body>
 </html>

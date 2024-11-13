@@ -10,8 +10,8 @@
 
 <!-- Sidebar -->
 <div class="sidebar">
+    <h2>SIVASAK</h2>
     <ul>
-        <h2>SIVASAK</h2>
         <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
         <li><img src="vendor.png" alt=""><a href="pendaftaran_vendor.php">Pendaftaran Vendor</a></li>
         <li><img src="questioner.png" alt=""><a href="questioner_supplier.php">Questioner Supplier</a></li>
@@ -29,15 +29,15 @@
     </div>
 </div>
 
-<!-- Questioner Form -->
+<!-- Content Section -->
 <div class="content">
-    <h2 class="form-title">Questioner Supplier PT PGP</h2>
+    <h2 class="form-title">Questioner Supplier</h2>
     <p>Questioner ini diisi untuk rekaman / supplier PT PGP untuk setiap jenis barang yang dipasok</p>
+
     <div class="form-container">
         <form action="proses-questioner-supplier.php" method="POST">
-            
-            <!-- Pertanyaan 1 -->
-            <label>Apakah bisnis utama anda yang sudah berjalan berkaitan dengan barang atau jasa yang akan dipasok?</label>
+            <!-- Question 1 -->
+            <label>1. Apakah bisnis utama anda yang sudah berjalan berkaitan dengan barang atau jasa yang akan dipasok?</label>
             <select name="pengalaman_bisnis" required>
                 <option value="">Pilih pengalaman</option>
                 <option value=">5 tahun">>5 tahun</option>
@@ -46,17 +46,17 @@
                 <option value="<1 tahun">Kurang dari 1 tahun</option>
                 <option value="bukan bisnis utama">Bukan bisnis utama</option>
             </select>
-            
-            <!-- Pertanyaan 2 -->
-            <label>Apakah perusahaan anda merupakan distributor resmi dari barang atau jasa yang anda pasok?</label>
+
+            <!-- Question 2 -->
+            <label>2. Apakah perusahaan anda merupakan distributor resmi dari barang atau jasa yang anda pasok?</label>
             <select name="distributor_resmi" required>
                 <option value="">Pilih jawaban</option>
                 <option value="ya">Ya</option>
                 <option value="tidak">Tidak</option>
             </select>
-            
-            <!-- Pertanyaan 3 -->
-            <label>Jelaskan rangkaian bisnis anda sampai ke PT PGP</label>
+
+            <!-- Question 3 -->
+            <label>3. Jelaskan rangkaian bisnis anda sampai ke PT PGP</label>
             <select name="rangkaian_bisnis" required>
                 <option value="">Pilih rangkaian bisnis</option>
                 <option value="langsung">Langsung dari Sumber/Pabrik</option>
@@ -65,89 +65,112 @@
                 <option value="tidak ada surat">Tidak ada surat penunjukan dari manufacture/sumber</option>
             </select>
 
-            <!-- Pertanyaan 4 -->
-            <label>Apa spesifikasi produk / jasa anda?</label>
+            <!-- Question 4 -->
+            <label>4. Apa spesifikasi produk / jasa anda?</label>
             <textarea name="spesifikasi_produk" rows="4" required></textarea>
 
-            <!-- Pertanyaan 5 -->
-            <label>Apakah perusahaan anda dapat memberikan harga dan kualitas terbaik dari barang / jasa yang anda pasok?</label>
+            <!-- Question 5 -->
+            <label>5. Apakah perusahaan anda dapat memberikan harga dan kualitas terbaik dari barang / jasa yang anda pasok?</label>
             <select name="harga_kualitas_terbaik" required>
                 <option value="">Pilih jawaban</option>
                 <option value="ya">Ya</option>
                 <option value="tidak">Tidak</option>
             </select>
 
-            <!-- Pertanyaan 6 -->
-            <label>Apakah perusahaan anda memiliki jaminan klaim terhadap barang / jasa yang anda pasok?</label>
+            <!-- Question 6 -->
+            <label>6. Apakah perusahaan anda memiliki jaminan klaim terhadap barang / jasa yang anda pasok?</label>
             <select name="jaminan_klaim" required>
                 <option value="">Pilih jawaban</option>
                 <option value="ya">Ya</option>
                 <option value="tidak">Tidak</option>
             </select>
 
-            <!-- Pertanyaan 7 -->
-            <label>Apakah perusahaan anda dapat memberikan ketepatan waktu dalam pengiriman dari barang / jasa yang kami pesan?</label>
+            <!-- Question 7 -->
+            <label>7. Apakah perusahaan anda dapat memberikan ketepatan waktu dalam pengiriman dari barang / jasa yang kami pesan?</label>
             <select name="ketepatan_waktu" required>
                 <option value="">Pilih jawaban</option>
                 <option value="ya">Ya</option>
                 <option value="tidak">Tidak</option>
             </select>
 
-              <!-- Pertanyaan 8 -->
-              <label>Apakah ada peristiwa penting menyangkut sertifikasi produk/ jasa atau sistem manajemen, penghargaan, dan lain-lain yang diterima oleh perusahaan anda?</label>
-              <select name="peristiwa_penting" required>
-                  <option value="">Pilih jawaban</option>
-                  <option value="ada">Ada (jelaskan di bawah)</option>
-                  <option value="tidak ada">Tidak ada</option>
-              </select>
-              <textarea name="keterangan_peristiwa" rows="3" placeholder="Jika ada, jelaskan di sini"></textarea>
-  
-              <!-- Pertanyaan 9 -->
-              <label>Apakah ada penjualan / pekerjaan ekspor produk / jasa anda?</label>
-              <select name="penjualan_ekspor" required>
-                  <option value="">Pilih jawaban</option>
-                  <option value="ada">Ada</option>
-                  <option value="tidak ada">Tidak ada</option>
-              </select>
-  
-              <!-- Pertanyaan 10 -->
-              <label>Berapa persen pelanggan anda yang mempunyai kontrak jangka panjang? (sebutkan)</label>
-              <input type="text" name="kontrak_jangka_panjang" placeholder="Isi persentase (%)">
+            <!-- Question 8 -->
+            <div class="question">
+                <label>8. Apakah ada peristiwa penting menyangkut sertifikasi produk/ jasa atau sistem manajemen, penghargaan, dan lain-lain yang diterima oleh perusahaan anda?</label>
+            </div>
+        
+            <!-- Answer options with checkboxes -->
+            <div class="answer-option">
+                <input type="radio" id="ada" name="peristiwa_penting" value="ada" onchange="toggleExplanation(this)">
+                <label for="ada">Ada (Jelaskan)</label>
+            </div>
+            <div class="explanation-field" id="explanationField">
+                <label for="keterangan_peristiwa">Jelaskan:</label>
+                <textarea name="keterangan_peristiwa" id="keterangan_peristiwa" rows="3" placeholder="....................................................................."></textarea>
+            </div>
+        
+            <div class="answer-option">
+                <input type="radio" id="tidak_ada" name="peristiwa_penting" value="tidak ada" onchange="toggleExplanation(this)">
+                <label for="tidak_ada">Tidak Ada</label>
+            </div>
 
-              <!-- Pertanyaan 10 -->
-              <label>Siapa Saja pelanggaan potensial dan utama anda (sebutkan)</label>
-              <input type="text" name="nama_pelanggan">
-  
-              <!-- Pertanyaan 11 -->
-              <label>Apakah anda memiliki fasilitas transportasi sendiri?</label>
-              <select name="fasilitas_transportasi" required>
-                  <option value="">Pilih jawaban</option>
-                  <option value="ya">Ya</option>
-                  <option value="truk atau sejenisnya">Truk atau sejenisnya</option>
-                  <option value="tidak">Tidak</option>
-              </select>
-  
-              <!-- Pertanyaan 12 -->
-              <label>Apakah perusahaan anda memiliki gudang penyimpanan barang / pool kendaraan sendiri?</label>
-              <select name="gudang_sendiri" required>
-                  <option value="">Pilih jawaban</option>
-                  <option value="ada">Ada</option>
-                  <option value="tidak ada">Tidak ada</option>
-              </select>
-  
-              <!-- Pertanyaan 13 -->
-              <label>Apakah ada rencana pengembangan usaha?</label>
-              <select name="rencana_pengembangan" required>
-                  <option value="">Pilih jawaban</option>
-                  <option value="ada">Ada (jelaskan di bawah)</option>
-                  <option value="tidak ada">Tidak ada (sebutkan alasan di bawah)</option>
-              </select>
-              <textarea name="keterangan_pengembangan" rows="3" placeholder="Jika ada, jelaskan di sini atau sebutkan alasannya"></textarea>
+            <!-- Question 9 -->
+            <label>9. Apakah ada penjualan / pekerjaan ekspor produk / jasa anda?</label>
+            <select name="penjualan_ekspor" required>
+                <option value="">Pilih jawaban</option>
+                <option value="ada">Ada</option>
+                <option value="tidak ada">Tidak ada</option>
+            </select>
 
+            <!-- Question 10 -->
+            <label>10. Berapa persen pelanggan anda yang mempunyai kontrak jangka panjang? (sebutkan)</label>
+            <input type="text" name="kontrak_jangka_panjang" placeholder="Isi persentase (%)">
+
+            <!-- Question 11 -->
+            <label>11. Siapa saja pelanggan potensial dan utama anda (sebutkan)</label>
+            <input type="text" name="nama_pelanggan">
+
+            <!-- Question 12 -->
+            <label>12. Apakah anda memiliki fasilitas transportasi sendiri?</label>
+            <select name="fasilitas_transportasi" required>
+                <option value="">Pilih jawaban</option>
+                <option value="ya">Ya</option>
+                <option value="truk atau sejenisnya">Truk atau sejenisnya</option>
+                <option value="tidak">Tidak</option>
+            </select>
+
+            <!-- Question 13 -->
+            <label>13. Apakah perusahaan anda memiliki gudang penyimpanan barang / pool kendaraan sendiri?</label>
+            <select name="gudang_sendiri" required>
+                <option value="">Pilih jawaban</option>
+                <option value="ada">Ada</option>
+                <option value="tidak ada">Tidak ada</option>
+            </select>
+
+            <!-- Question 14 -->
+            <label>14. Apakah ada rencana pengembangan usaha?</label>
+            <select name="rencana_pengembangan" required>
+                <option value="">Pilih jawaban</option>
+                <option value="ada">Ada (jelaskan di bawah)</option>
+                <option value="tidak ada">Tidak ada (sebutkan alasan di bawah)</option>
+            </select>
+            <textarea name="keterangan_pengembangan" rows="3" placeholder="Jika ada, jelaskan di sini atau sebutkan alasannya"></textarea>
+
+            <!-- Submit Button -->
             <button type="submit" class="submit-button">Submit</button>
         </form>
     </div>
 </div>
+
+<script>
+    function toggleExplanation(selectedOption) {
+        const explanationField = document.getElementById("explanationField");
+        if (selectedOption.value === "ada") {
+            explanationField.style.display = "block";
+        } else {
+            explanationField.style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>

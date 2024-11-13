@@ -17,7 +17,6 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     <title>Buat Tawaran</title>
     <link rel="stylesheet" href="styledash.css">
 </head>
-<body>
 
 <header>
     <div class="sidebar">
@@ -37,39 +36,40 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     </div>
 </header>
 
-<div class="navbar">
-    <div class="menu">
-        <ul>
-            <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
-            <li><a href="logout.php">Logout</a></li>
-        </ul>
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>
     </div>
-</div>
 
-<div class="main-content">
-    <h2>Buat Tawaran</h2>
-    <form action="submit_tawaran.php" method="post" enctype="multipart/form-data">
-        <label for="judul-tawaran">Judul Tawaran</label>
-        <input type="text" id="judul-tawaran" name="judul-tawaran" required>
+    <div class="akun">
+        <h2>Buat Tawaran</h2>
+        <form action="submit_tawaran.php" method="post" enctype="multipart/form-data">
+            <label for="judul-tawaran">Judul Tawaran</label>
+            <input type="text" id="judul-tawaran" name="judul-tawaran" required>
 
-        <label for="kendaraan">Jenis Barang</label>
-        <input type="text" id="judul-tawaran" name="judul-tawaran" required>
+            <label for="kendaraan">Jenis Barang</label>
+            <input type="text" id="judul-tawaran" name="judul-tawaran" required>
 
-        <label for="deskripsi">Deskripsi</label>
-        <textarea id="deskripsi" name="deskripsi" rows="4" required></textarea>
+            <label for="deskripsi">Deskripsi</label>
+            <textarea id="deskripsi" name="deskripsi" rows="4" required></textarea>
 
-        <label for="harga-total">Harga Total (Rp)</label>
-        <input type="number" id="harga-total" name="harga-total" required>
+            <label for="harga-total">Harga Total (Rp)</label>
+            <input type="number" id="harga-total" name="harga-total" required>
 
-        <label for="masa-berlaku">Masa Berlaku</label>
-        <input type="date" id="masa-berlaku" name="masa-berlaku" required>
+            <label for="masa-berlaku">Masa Berlaku</label>
+            <input type="date" id="masa-berlaku" name="masa-berlaku" required>
 
-        <label for="lampiran">Lampiran</label>
-        <input type="file" id="lampiran" name="lampiran">
+            <label for="lampiran">Lampiran</label>
+            <input type="file" id="lampiran" name="lampiran">
 
-        <button type="submit">Ajukan Tawaran</button>
-    </form>
-</div>
+            <button type="submit">Ajukan Tawaran</button>
+        </form>
+    </div>
 
 </body>
 </html>
