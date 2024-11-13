@@ -77,13 +77,13 @@
                 <!-- Tambahkan baris data tender lainnya -->
             </tbody>
         </table>
-    </div>
-
-    <!-- Tombol Tambah Data Kendaraan -->
-    <div class="button-container">
+        <!-- Tombol Tambah Data Kendaraan -->
+    <div class="button-container-kendaraan">
         <button class="tambah-button" onclick="window.location.href='inputdatakendaraan.php'">Tambah Data</button>
     </div>
 </div>
+    </div>
+
 
 <!-- Modal Pop-up untuk Cek Akun tender -->
 <div class="modal" id="modal">

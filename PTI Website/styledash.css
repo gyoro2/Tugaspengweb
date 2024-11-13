@@ -117,6 +117,13 @@ body {
     margin-bottom: 20px;
 }
 
+.button-container-kendaraan {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 .button-container-supir {
     display: flex;
     justify-content: right;
