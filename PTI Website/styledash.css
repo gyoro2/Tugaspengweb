@@ -314,9 +314,31 @@ tr:hover {
 
 .form-container label {
     display: block;
-    font-weight: bold;
     margin-bottom: 5px;
     color: #34495e;
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.form-deskripsi {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 20px;
+    align-content: center;
+}
+
+.content form-title h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content form-deskripsi p{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .form-container input,
@@ -362,7 +384,7 @@ tr:hover {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #34495e;
+    color: black;
 }
 
 .form-container input,
@@ -373,10 +395,19 @@ tr:hover {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23777" d="M7 10l5 5 5-5z"/></svg>'); /* Ikon panah ke bawah */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
 }
 
 .form-container select {
     appearance: none;
+}
+
+.form-container label[for]:after {
+    content: ' *'; /* Tanda bintang */
+    color: red; /* Warna bintang merah */
+    font-weight: bold;
 }
 
 .form-buttons {
@@ -779,9 +810,23 @@ form button:hover {
 }
 
 /* Content Area */
-.content {
+.content-quisoner {
     margin-left: 250px;
     padding: 20px;
+}
+
+.content-quisoner h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quisoner-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .announcement-container {
@@ -932,7 +977,7 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 20px;
-    margin-left: 300px;
+    margin-left: 250px;
     font-size: 14px;
     display: block;
 }

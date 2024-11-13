@@ -12,9 +12,9 @@
 <div class="sidebar">
     <ul>
         <h2>SIVASAK</h2>
-        <li><img src="register.png" alt=""><a href="pendaftaran.php">Pendaftaran Vendor</a></li>
-        <li><img src="questioner.png" alt=""><a href="questioner.php">Questioner</a></li>
-        <li><img src="announcement.png" alt=""><a href="pengumumanpemenang.php">Pengumuman Pemenang Tender</a></li>
+        <li><img src="pb.png" alt=""><a href="pendaftaran.php">Pendaftaran Vendor</a></li>
+        <li><img src="file.png" alt=""><a href="questioner.php">Questioner</a></li>
+        <li><img src="sh.png" alt=""><a href="pengumumanpemenang.php">Pengumuman Pemenang Tender</a></li>
     </ul>
 </div>
 
