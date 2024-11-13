@@ -51,18 +51,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+
 <div class="container">
+    <img src="pgp.png" alt="Logo" class="logo">
     <h2>Login</h2>
     <div class="form">
         <form method="POST" action="">
-            <input type="email" name="email" required placeholder="Email"><br>
-            <input type="password" name="password" id="password" required placeholder="Password"><br>
-            
-            <!-- Checkbox untuk menampilkan password -->
-            <label>
-                <input type="checkbox" onclick="togglePassword()"> Show Password
-            </label><br>
-            <input type="submit" value="Login">
+            <input type="email" name="email" required placeholder="Email..."><br>
+            <input type="password" name="password" id="password" required placeholder="Password..."><br><br>
+            <input type="checkbox" onclick="togglePassword()"><label for="password"> Show Password </label>
+            <br><br>
+            <div style="text-align: center"> <input type="submit" value="Login"></div>
+           
             <p>Don't have an account? <a href="register.php">Register</a></p>
         </form>
         <?php

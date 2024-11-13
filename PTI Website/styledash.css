@@ -164,7 +164,7 @@ body {
 }
 
 table {
-    width: 100%;
+    width: 900px;
     border-collapse: collapse;
 }
 
@@ -444,11 +444,9 @@ tr:hover {
 }
 
 .main-content {
-    margin-left: 200px;
-    padding: 80px 20px 20px 20px;
-    background-color: #f4f4f4;
-    min-height: 100vh;
-    justify-content: center;
+    margin-left: 240px;
+    padding: 40px;
+    margin-top: 60px;
 }
 
 /* Dashboard Cards */
