@@ -117,6 +117,13 @@ body {
     margin-bottom: 20px;
 }
 
+.button-container-supir {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 .button-container-tawaran, .search-container-tawaran{
     display: flex;
     align-items: right;
@@ -125,7 +132,9 @@ body {
 .wrapper {
     display: flex;
     align-items: right;
+    justify-content: right;
     gap: 10px; /* Mengatur jarak antar elemen */
+    margin-top: 10px;
 }
 
 .tambah-button {
@@ -178,6 +187,8 @@ tr:hover {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .edit-button {

@@ -37,11 +37,6 @@
 <!-- Daftar Akun Supir -->
 <div class="akun">
     <h2>Daftar Akun Supir</h2>
-    
-    <!-- Tombol Tambah Akun -->
-    <div class="button-container">
-        <button class="tambah-button" onclick="window.location.href='buatakunsupir.php'">Tambah Akun</button>
-    </div>
 
     <div class="table-container">
         <table>
@@ -69,6 +64,10 @@
                 <!-- Tambahkan baris data supir lainnya -->
             </tbody>
         </table>
+        <!-- Tombol Tambah Akun -->
+    <div class="button-container-supir">
+        <button class="tambah-button" onclick="window.location.href='buatakunsupir.php'">Tambah Akun</button>
+    </div>
     </div>
 </div>
 
