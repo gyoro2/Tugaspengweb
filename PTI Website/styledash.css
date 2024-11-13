@@ -977,7 +977,7 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 20px;
-    margin-left: 250px;
+    margin-left: 900px;
     font-size: 14px;
     display: block;
 }
@@ -1043,4 +1043,79 @@ td img {
     margin-left: 0px;
     font-size: 14px;
     display: block;
+}
+/* Styling untuk kontainer pertanyaan */
+.question {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Styling untuk dropdown */
+.select-answer {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Styling untuk pilihan jawaban */
+.answer-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.answer-option input[type="radio"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #666; /* Warna checkbox sesuai gambar */
+}
+
+.answer-option label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Styling untuk field penjelasan */
+.explanation-field {
+    display: none; /* Default: hidden */
+    margin-left: 26px;
+    font-size: 14px;
+    color: #666;
+}
+
+.explanation-field label {
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.explanation-field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+    background-color: #f9f9f9;
+    font-style: italic;
+}
+
+/* Placeholder styling mirip dengan gambar */
+.explanation-field textarea::placeholder {
+    font-style: normal;
+    color: #bbb;
 }
