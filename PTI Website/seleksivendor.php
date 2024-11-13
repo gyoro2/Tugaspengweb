@@ -14,7 +14,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleksi Vendor</title>
+    <title>Daftar Vendor</title>
     <link rel="stylesheet" href="styledash.css">
 </head>
 <body>
@@ -57,17 +57,20 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
         <table>
             <thead>
                 <tr>
-                    <th>Nama Vendor</th>
+                    <th>Nama Perusahaan</th>
+                    <th>NIB Perusahaan</th>
+                    <th>Alamat Perusahaan</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Vendor A</td>
+                    <td>1234567890</td>
+                    <td>Jl. Manggis Raya</td>
                     <td>
-                        <button class="edit-button" onclick="window.location.href='editvendor.php'">Edit</button>
-                        <button class="cek-button" onclick="openModal()">Cek</button>
                         <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
+                        <button class="cek-button" onclick="openModal()">Cek</button>
                     </td>
                 </tr>
                 <tr>
@@ -81,7 +84,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
 <div class="modal" id="modal">
     <div class="modal-content">
         <h3>Detail Vendor</h3>
-        <p>Nama Vendor: Vendor A</p>
+        <p>Nama Perusahaan: Vendor A</p>
         <p>No Telepon: 08123456789</p>
         <p>Email: vendorA@example.com</p>
         <p>Alamat: Jl. Contoh Alamat</p>

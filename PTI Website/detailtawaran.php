@@ -13,7 +13,7 @@
     <ul>
         <h2>SIVASAK</h2>
         <li><img src="home.png" alt=""><a href="dashboardvendor.php">Dashboard</a></li>
-        <li><img src="negoisasi.png" alt=""><a href="negosiasivendor.php">Negosiasi</a></li>
+        <li><img src="sh.png" alt=""><a href="negosiasivendor.php">Negosiasi</a></li>
         <li><img src="offer.png" alt=""><a href="daftartawaran.php">Daftar Tawaran Perusahaan</a></li>
     </ul>
 </div>
@@ -22,7 +22,7 @@
 <div class="navbar">
     <div class="menu">
         <ul>
-            <li><a href="#">Vendor</a><img src="vendor_icon.png" alt=""></li>
+            <li><a href="#">Vendor</a><img src="bp.png" alt=""></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
@@ -59,11 +59,11 @@
                     <td>: 28/05/2020</td>
                 </tr>
             </table>
-        </div>
-    </div>
-
-    <div class="button-container">
+            <div class="button-isi">
             <button class="isi-button" onclick="openIsiModal()">Isi</button>
+        </div>
+        
+    </div>
     </div>
 
     <!-- Modal Pop-up for Isi Form -->
