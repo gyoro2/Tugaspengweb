@@ -97,21 +97,20 @@
             <div class="question">
                 <label>8. Apakah ada peristiwa penting menyangkut sertifikasi produk/ jasa atau sistem manajemen, penghargaan, dan lain-lain yang diterima oleh perusahaan anda?</label>
             </div>
-        
-            <!-- Answer options with checkboxes -->
-            <div class="answer-option">
-                <input type="radio" id="ada" name="peristiwa_penting" value="ada" onchange="toggleExplanation(this)">
-                <label for="ada">Ada (Jelaskan)</label>
-            </div>
+
+            <!-- Dropdown untuk pilihan jawaban -->
+            <select class="select-answer" onchange="toggleExplanationField(this)">
+                <option value="">Pilih jawaban</option>
+                <option value="ada">Ada (Jelaskan)</option>
+                <option value="tidak_ada">Tidak Ada</option>
+            </select>
+
+            <!-- Field untuk penjelasan -->
             <div class="explanation-field" id="explanationField">
                 <label for="keterangan_peristiwa">Jelaskan:</label>
                 <textarea name="keterangan_peristiwa" id="keterangan_peristiwa" rows="3" placeholder="....................................................................."></textarea>
             </div>
-        
-            <div class="answer-option">
-                <input type="radio" id="tidak_ada" name="peristiwa_penting" value="tidak ada" onchange="toggleExplanation(this)">
-                <label for="tidak_ada">Tidak Ada</label>
-            </div>
+
 
             <!-- Question 9 -->
             <label>9. Apakah ada penjualan / pekerjaan ekspor produk / jasa anda?</label>
@@ -147,14 +146,34 @@
             </select>
 
             <!-- Question 14 -->
-            <label>14. Apakah ada rencana pengembangan usaha?</label>
-            <select name="rencana_pengembangan" required>
-                <option value="">Pilih jawaban</option>
-                <option value="ada">Ada (jelaskan di bawah)</option>
-                <option value="tidak ada">Tidak ada (sebutkan alasan di bawah)</option>
-            </select>
-            <textarea name="keterangan_pengembangan" rows="3" placeholder="Jika ada, jelaskan di sini atau sebutkan alasannya"></textarea>
+            <div class="question">
+                <label>14. Apakah ada rencana pengembangan usaha?</label>
+            </div>
 
+            <!-- Table layout untuk pilihan jawaban -->
+            <div class="table-container">
+                <!-- Dropdown pilihan jawaban -->
+                <div class="table-row">
+                    <div class="table-cell">
+                        <select class="select-answer" onchange="toggleExplanationField14(this)">
+                            <option value="">Pilih jawaban</option>
+                            <option value="ada">Ada (Jelaskan)</option>
+                            <option value="tidak_ada">Tidak Ada</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Kolom penjelasan (muncul jika "Ada" dipilih) -->
+                <div class="table-row explanation-field" id="explanationField14">
+                    <div class="table-cell">
+                        <label for="keterangan_pengembangan">Jelaskan:</label>
+                        <textarea name="keterangan_pengembangan" id="keterangan_pengembangan" rows="3" placeholder="....................................................................."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            
+            
             <!-- Submit Button -->
             <button type="submit" class="submit-button">Submit</button>
         </form>
@@ -162,14 +181,22 @@
 </div>
 
 <script>
-    function toggleExplanation(selectedOption) {
-        const explanationField = document.getElementById("explanationField");
-        if (selectedOption.value === "ada") {
-            explanationField.style.display = "block";
-        } else {
-            explanationField.style.display = "none";
-        }
+function toggleExplanationField(select) {
+    const explanationField = document.getElementById("explanationField");
+    if (select.value === "ada") {
+        explanationField.style.display = "block";
+    } else {
+        explanationField.style.display = "none";
     }
+}
+function toggleExplanationField14(select) {
+    const explanationField14 = document.getElementById("explanationField14");
+    if (select.value === "ada") {
+        explanationField14.style.display = "table-row";
+    } else {
+        explanationField14.style.display = "table-row";
+    }
+}
 </script>
 
 </body>
