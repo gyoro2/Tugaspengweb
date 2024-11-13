@@ -52,12 +52,12 @@
                 <tr>
                     <td>1</td>
                     <td>Vendor 1</td>
-                    <td><img src="view_icon.png" alt="View"></td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Vendor 2</td>
-                    <td><img src="view_icon.png" alt="View"></td>
+                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
                 </tr>
                 <!-- Tambahkan baris tambahan sesuai kebutuhan -->
             </tbody>
@@ -70,6 +70,7 @@
         <p>Copyright © 2024. All rights reserved.</p>
     </div>
 </div>
+
 
 </body>
 </html>
