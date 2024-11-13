@@ -1,4 +1,4 @@
-<div?php
+<?php
     session_start();
     include 'database.php';
 
