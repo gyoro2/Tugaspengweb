@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <table>
             <thead>
                 <tr>
-                    <th>Nama Lengkap</th>
+                    <th>Nama Vendor</th>
                     <th>No Telpon</th>
                     <th>Email</th>
                     <th>Password</th>
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </thead>
             <tbody>
                 <tr>
-                    <td>Tender 1</td>
+                    <td>Vendor 1</td>
                     <td>0895410035080</td>
                     <td>tender1@example.com</td>
                     <td>tender0101</td>

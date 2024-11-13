@@ -68,7 +68,7 @@
                         <th>Jenis Barang</th>
                         <th>Range Harga</th>
                         <th>Masa Berlaku</th>
-                        <th>Masa Berakhir</th>
+                        <th>Deskripsi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -77,7 +77,7 @@
                 <td>Minuman</td>
                 <td>RP 1.000.000</td>
                 <td>1/1/1999</td>
-                <td>31/31/1999</td>
+                <td>Contoh</td>
                 <div class="wrapper">
                         <td>
                             <button class="edit-button" onclick="window.location.href='edittawaran.php'">Edit</button>
@@ -101,7 +101,7 @@
             <p>Jenis Barang : Minuman</p>
             <p>Range Harga : RP 1.000.000</p>
             <p>Masa Berlaku : 1/1/1999</p>
-            <p>Masa Berakhir : 31/31/1999</p>
+            <p>Deskripsi : Contoh</p>
             <div class="modal-buttons">
                 <button class="close-button" onclick="closeModal()">Tutup</button>
             </div>

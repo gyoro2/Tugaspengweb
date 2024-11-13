@@ -35,11 +35,11 @@
 
     <!-- Daftar Akun Tender -->
     <div class="akun">
-        <h2>Edit Akun Tender</h2>
+        <h2>Buat Akun Vendor</h2>
         <div class="form-container">
             <form action="proses_input.php" method="POST">
                     <tr>
-                        <th>Nama Tender</th>
+                        <th>Nama Vendor</th>
                         <td><input type="text" id="nama" name="nama"></td>
                     </tr>
                     <tr>
@@ -51,12 +51,8 @@
                         <td><input type="email" id="email" name="email"></td>
                     </tr>
                     <tr>
-                        <th>Jenis</th>
-                        <td><input type="text" id="jenis" name="jenis"></td>
-                    </tr>
-                    <tr>
-                        <th>Alamat</th>
-                        <td><input type="text" id="alamat" name="alamat"></td>
+                        <th>Password</th>
+                        <td><input type="password" id="password" name="password"></td>
                     </tr>
                     <div class="form-buttons">
                 <button type="submit" class="submit-button">Simpan</button>
