@@ -78,11 +78,13 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
             <td>RP 1.000.000</td>
             <td>1/1/1999</td>
             <td>31/31/1999</td>
+            <div class="wrapper">
                     <td>
                         <button class="edit-button" onclick="window.location.href='edittawaran.php'">Edit</button>
                         <button class="cek-button" onclick="openModal()">Cek</button>
                         <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
                     </td>
+                </div>
             </tbody>
         </table>
     </div>
