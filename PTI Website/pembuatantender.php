@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <!-- Daftar Akun Supir -->
 <div class="akun">
-    <h2>Daftar Akun Tender</h2>
+    <h2>Daftar Akun Vendor</h2>
 
     <div class="table-container">
         <table>

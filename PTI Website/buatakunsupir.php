@@ -46,7 +46,9 @@
                     <th>Nama Supir</th>
                     <th>No Telpon</th>
                     <th>Email</th>
+                    <th>Password</th>
                     <th>Jenis Kendaraan</th>
+                    <th>No. SIM</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -55,7 +57,9 @@
                     <td>Supir 1</td>
                     <td>08123456789</td>
                     <td>supir1@example.com</td>
+                    <td>password</td>
                     <td>Truck</td>
+                    <td>1234567890</td>
                     <td>
                         <button class="edit-button" onclick="window.location.href='editakunsupir.php'">Edit</button>
                         <button class="cek-button" onclick="openModal()">Cek</button>
@@ -67,7 +71,7 @@
         </table>
         <!-- Tombol Tambah Akun -->
     <div class="button-container-supir">
-        <button class="tambah-button" onclick="window.location.href='buatakunsupir.php'">Tambah Akun</button>
+        <button class="tambah-button" onclick="window.location.href='tambahakunsupir.php'">Tambah Akun</button>
     </div>
     </div>
 </div>

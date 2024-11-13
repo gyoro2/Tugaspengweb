@@ -31,7 +31,7 @@
 <!-- Questioner Form -->
 <div class="content">
     <h2 class="form-title">Questioner Supplier PT PGP</h2>
-    <div class="form-container">
+    <div class="form-container-kuisoner">
         <form action="proses-questioner-supplier.php" method="POST">
             
             <!-- Pertanyaan 1 -->

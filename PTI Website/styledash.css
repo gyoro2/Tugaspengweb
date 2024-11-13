@@ -387,8 +387,8 @@ tr:hover {
     color: black;
 }
 
-.form-container input,
-.form-container select {
+.form-container-kuisoner input,
+.form-container-kuisoner select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -400,11 +400,11 @@ tr:hover {
     background-position: right 10px center;
 }
 
-.form-container select {
+.form-container-kuisoner select {
     appearance: none;
 }
 
-.form-container label[for]:after {
+.form-container-kuisoner label[for]:after {
     content: ' *'; /* Tanda bintang */
     color: red; /* Warna bintang merah */
     font-weight: bold;
