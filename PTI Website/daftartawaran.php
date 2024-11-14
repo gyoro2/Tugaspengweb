@@ -29,12 +29,16 @@
 </div>
 
 <!-- Daftar Tawaran Section -->
-<div class="main-content">   
+<div class="content">   
     <div class="offer-list">
         <h2>Daftar Tawaran</h2>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
+
+         <!-- Tombol Pencari -->
+    <div class="search-container">
+        <input type="text" placeholder="Cari Nopol Kendaraan">
+        <button class="search-button">Cari</button>
+    </div>
+    
         <div class="table-container">
             <table>
                 <thead>

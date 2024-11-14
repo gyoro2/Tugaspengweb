@@ -33,7 +33,7 @@
         </ul>
     </div>
 </div>
-    <div class="akun">
+    <div class="content">
     <h2>Data Calon Vendor</h2>
     <div class="search-container">
         <input type="text" placeholder="Cari Nopol Kendaraan">
