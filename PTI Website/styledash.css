@@ -183,7 +183,7 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-.edit-button, .cek-button, .delete-button, .accept-button{
+.edit-button, .cek-button, .delete-button, .accept-button, .button-isi{
     background-color: #3498db;
     color: white;
     padding: 8px 12px;
@@ -210,6 +210,8 @@ tr:hover {
 .accept-button {
     background-color: #27ae60;
 }
+
+
 
 .edit-button:hover {
     background-color: #e67e22;

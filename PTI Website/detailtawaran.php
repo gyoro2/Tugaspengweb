@@ -14,7 +14,7 @@
         <h2>SIVASAK</h2>
         <li><img src="home.png" alt=""><a href="dashboardvendor.php">Dashboard</a></li>
         <li><img src="sh.png" alt=""><a href="negosiasivendor.php">Negosiasi</a></li>
-        <li><img src="offer.png" alt=""><a href="daftartawaran.php">Daftar Tawaran Perusahaan</a></li>
+        <li><img src="pb.png" alt=""><a href="daftartawaran.php">Daftar Tawaran Perusahaan</a></li>
     </ul>
 </div>
 
@@ -55,9 +55,8 @@
                     <td>: 20/05/2020</td>
                 </tr>
                 <tr>
-                    <td>Masa Berakhir</td>
-                    <td>: 28/05/2020</td>
-                </tr>
+                    <td>Lampiran</td>
+                    <td>: <a href="lampiran.pdf">lampiran.pdf</a></td>
             </table>
             <div class="button-isi">
             <button class="isi-button" onclick="openIsiModal()">Isi</button>

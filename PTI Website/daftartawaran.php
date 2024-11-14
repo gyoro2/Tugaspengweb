@@ -14,7 +14,7 @@
         <h2>SIVASAK</h2>
         <li><img src="home.png" alt=""><a href="DashboardVendor.php">Dashboard</a></li>
         <li><img src="sh.png" alt=""><a href="negosiasivendor.php">Negosiasi</a></li>
-        <li><img src="offer.png" alt=""><a href="daftartawaran.php">Daftar Tawaran Perusahaan</a></li>
+        <li><img src="pb.png" alt=""><a href="daftartawaran.php">Daftar Tawaran Perusahaan</a></li>
     </ul>
 </div>
 
@@ -35,10 +35,10 @@
 
          <!-- Tombol Pencari -->
     <div class="search-container">
-        <input type="text" placeholder="Cari Nopol Kendaraan">
+        <input type="text" placeholder="">
         <button class="search-button">Cari</button>
     </div>
-    
+
         <div class="table-container">
             <table>
                 <thead>
@@ -49,6 +49,7 @@
                         <th>Range Harga</th>
                         <th>Masa Berlaku</th>
                         <th>Deskripsi</th>
+                        <th>Lampiran</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -56,11 +57,12 @@
                     <!-- Example rows, these should be populated dynamically -->
                     <tr>
                         <td><input type="checkbox"></td>
-                        <td>Education Supply</td>
+                        <td>Education Supply</td> 
                         <td>Alat Tulis</td>
                         <td>Rp1.000.000 - Rp5.000.000</td>
                         <td>25/05/2023</td>
-                        <td>Conctoh</td>
+                        <td>contoh</td>
+                        <td> - </td>
                         <td><a href="detailtawaran.php"><button class="apply-btn">Cek</button></a></td>
                     </tr>
                     <tr>
@@ -69,7 +71,8 @@
                         <td>Peralatan Medis</td>
                         <td>Rp5.000.000 - Rp10.000.000</td>
                         <td>01/06/2023</td>
-                        <td>contoh</td>
+                        <td> contoh </td>
+                        <td> -</td>
                         <td><a href="detailtawaran.php"><button class="apply-btn">Cek</button></a></td>
                     </tr>
                     <!-- Add more rows as needed -->
