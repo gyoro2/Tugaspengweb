@@ -38,7 +38,7 @@
 </div>
 
 <!-- Edit Akun Supir Form -->
-<div class="akun">
+<div class="content">
     <h2>Edit Akun Supir</h2>
     <div class="form-container">
         <form action="proses-edit-akun-supir.php" method="POST">

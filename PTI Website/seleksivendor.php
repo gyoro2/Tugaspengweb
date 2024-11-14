@@ -48,7 +48,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     </div>
 
     <!-- Daftar Vendor -->
-    <div class="akun vendor">
+    <div class="content">
         <h2>Seleksi Vendor</h2>
 
         <!-- Search Bar -->

@@ -35,7 +35,7 @@
     </div>
 
     <!-- Daftar Akun Supir -->
-<div class="akun">
+<div class="content">
     <h2>Daftar Kendaraan</h2>
     
     <div class="search-container">

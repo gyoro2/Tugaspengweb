@@ -444,9 +444,9 @@ tr:hover {
 }
 
 .main-content {
-    margin-left: 240px;
+    margin-left: 200px;
     padding: 40px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 /* Dashboard Cards */
@@ -718,7 +718,7 @@ form button:hover {
 /* Perluasan Layout dan Spacing */
 .main-content, .content, .akun, .akuntender, .vendor-info, .offer-list, .offer-details {
     width: calc(100% - 300px); /* Memperluas lebar konten dengan jarak tambahan dari sidebar */
-    margin-left: 150px; /* Lebar sidebar yang lebih lebar */
+    margin-left: 100px; /* Lebar sidebar yang lebih lebar */
     padding: 40px 60px;
     background-color: #f4f4f4;
     align-content: center;

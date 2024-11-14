@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="akun">
+    <div class="content">
         <h2>Daftar Negosiasi</h2>
         <div class="table-container">
             <table>

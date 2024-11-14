@@ -47,7 +47,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
         </div>
     </div>
 
-    <div class="akun">
+    <div class="conetnt">
         <h2>Buat Tawaran</h2>
         <form action="submit_tawaran.php" method="post" enctype="multipart/form-data">
             <label for="judul-tawaran">Judul Tawaran</label>

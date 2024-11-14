@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="akun vendor">
+    <div class="content">
         <h2>Daftar Tawaran</h2>
 
         <div class="wrapper">

@@ -29,7 +29,7 @@
 </div>
 
 <!-- Detail Tawaran Section -->
-<div class="main-content">
+<div class="content">
     <div class="offer-details main-content">
         <h2>Detail Tawaran</h2>
         <div class="details-box">

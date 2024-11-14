@@ -35,7 +35,7 @@
     </div>
 
     <!-- Daftar Akun Tender -->
-    <div class="akun">
+    <div class="content">
         <h2>Buat Akun Vendor</h2>
         <div class="form-container">
             <form action="proses_input.php" method="POST">

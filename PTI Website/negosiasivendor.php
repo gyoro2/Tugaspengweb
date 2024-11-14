@@ -29,7 +29,7 @@
 </div>
 
 <!-- Isi -->
-<div class="main-content">
+<div class="content">
     <div class="negotiation-container">
         <h2>Negosiasi Vendor</h2>
         <form class="negotiation-form" action="submit_negotiation.php" method="POST">

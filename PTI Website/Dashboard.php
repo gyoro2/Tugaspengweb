@@ -49,7 +49,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
 </div>
 
 <!-- Main Content -->
-<div class="main-content">
+<div class="content">
     <!-- Dashboard Cards Section -->
     <div class="dashboard-cards">
         <div class="card card-1">

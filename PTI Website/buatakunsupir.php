@@ -37,7 +37,7 @@
 </div>
 
 <!-- Daftar Akun Supir -->
-<div class="akun">
+<div class="content">
     <h2>Daftar Akun Supir</h2>
 
     <div class="table-container">

@@ -35,7 +35,7 @@
     </div>
 
     <!-- Daftar Akun Supir -->
-    <div class="akun">
+    <div class="content">
         <h2>Tambah Akun Supir</h2>
         <div class="form-container">
             <form action="proses_input.php" method="POST">

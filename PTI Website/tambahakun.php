@@ -37,7 +37,7 @@
 </div>
 
 <!-- Buat Akun Supir Form -->
-<div class="akun">
+<div class="content">
     <h2>Buat Akun Supir</h2>
     <div class="form-container">
         <form action="proses-akun-supir.php" method="POST">

@@ -9,7 +9,7 @@
 <div class="sidebar">
         <ul>
             <h2>SIVASAK</h2>
-            <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
+        <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
         <li><img src="pb.png" alt=""><a href="listtawaran.php">Buat Tawaran</a></li>
         <li><img src="cb.png" alt=""><a href="seleksivendor.php">Seleksi Vendor</a></li>
         <li><img src="sh.png" alt=""><a href="negoisasi.php">Negosiasi</a></li>
@@ -35,7 +35,7 @@
     </div>
 
 <!-- Daftar Komplain -->
-<div class="akun">
+<div class="content">
     <h2>Daftar Komplain</h2>
     
     <!-- Tombol Pencari -->

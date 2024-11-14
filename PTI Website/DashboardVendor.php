@@ -29,7 +29,7 @@
 </div>
 
 <!-- Informasi Vendor -->
-<div class="main-content">
+<div class="content">
     <div class="vendor-info">
         <h2>Informasi Vendor</h2>
         <div class="info-container">

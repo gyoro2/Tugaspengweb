@@ -38,7 +38,7 @@
 </div>
 
 <!-- Edit Akun Tender Form -->
-<div class="akun">
+<div class="content">
     <h2>Edit Akun Vendor</h2>
     <div class="form-container">
         <form action="proses-edit-akun-supir.php" method="POST">

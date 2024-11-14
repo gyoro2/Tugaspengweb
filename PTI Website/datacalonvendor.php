@@ -88,7 +88,7 @@
                         <!-- Tambahkan lebih banyak data sesuai kebutuhan -->
                     </tbody>
                 </table>
-           
+          </div> 
     </div>
 
     <script>

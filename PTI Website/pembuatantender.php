@@ -80,8 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 
-    <!-- Daftar Akun Supir -->
-<div class="akun">
+    <!-- Daftar Akun Vendor -->
+<div class="content">
     <h2>Daftar Akun Vendor</h2>
 
     <div class="table-container">
