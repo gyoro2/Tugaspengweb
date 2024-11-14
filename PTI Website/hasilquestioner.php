@@ -39,7 +39,7 @@
     <!-- Title and Back Button -->
     
     <h2>Hasil Questioner</h2>
-    <button class="back-tombol">Kembali</button>
+    <button class="back-tombol" onclick="window.location.href='daftarquestioner.php'">Kembali</button>
     <!-- Table for displaying questions and answers -->
     <table>
         <thead>

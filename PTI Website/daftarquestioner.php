@@ -53,59 +53,56 @@
                 <tr>
                     <td>1</td>
                     <td>Vendor 1</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Vendor 2</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Vendor 3</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>Vendor 4</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>Vendor 5</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td>Vendor 6</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>7</td>
                     <td>Vendor 7</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td>Vendor 8</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>9</td>
                     <td>Vendor 9</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <tr>
                     <td>10</td>
                     <td>Vendor 10</td>
-                    <td><button onclick="window.location.href='hasilquestioner.html'"><img src="eye.png"></button></td>
+                    <td><button onclick="window.location.href='hasilquestioner.php'"><img src="eye.png"></button></td>
                 </tr>
                 <!-- Tambahkan baris tambahan sesuai kebutuhan -->
             </tbody>
         </table>
-    </div>
-    <button class="back-button">Kembali</button>
-    </div>
 
     <!-- Footer Section -->
     <div class="footer">

@@ -174,7 +174,7 @@
             
             
             <!-- Submit Button -->
-            <button type="submit" class="submit-button">Submit</button>
+            <button type="submit" class="submit-button" onclick="window.location.href='questioner.php'">Submit</button>
         </form>
     </div>
 </div>
