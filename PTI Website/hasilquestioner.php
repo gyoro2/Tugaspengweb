@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styledash.css">
 </head>
 <body>
-
 <div class="sidebar">
     <ul>
         <h2>SIVASAK</h2>
@@ -26,16 +25,18 @@
     </ul>
 </div>
 
-    <!-- Header Section -->
-    <div class="header">
-        <div class="header-content">
-            <span>Admin</span>
-            <img src="user_icon.png" alt="Admin Icon">
-            <a href="logout.php" class="logout">Logout</a>
-        </div>
+<!-- Header Section -->
+<div class="navbar">
+    <div class="menu">
+        <ul>
+            <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
     </div>
+</div>
+
 <!-- Main Content Section -->
-<div class="main-content">
+<div class="content">
     <!-- Title and Back Button -->
     
     <h2>Hasil Questioner</h2>

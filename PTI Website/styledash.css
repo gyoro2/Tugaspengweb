@@ -429,6 +429,7 @@ tr:hover {
     background-color: #2ecc71;
 }
 
+/*
 .cancel-button {
     background-color: #e74c3c;
     color: white;
@@ -441,7 +442,7 @@ tr:hover {
 
 .cancel-button:hover {
     background-color: #c0392b;
-}
+} */
 
 .main-content {
     margin-left: 200px;
@@ -1167,4 +1168,15 @@ td img {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+}
+
+/* Negosiasi Vendor Detail */
+.price-display {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #495057;
 }
