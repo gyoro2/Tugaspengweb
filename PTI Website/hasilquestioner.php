@@ -7,7 +7,8 @@
     <title>Daftar Vendor</title>
     <link rel="stylesheet" href="styledash.css">
 </head>
-<body>
+
+<header>
 <div class="sidebar">
     <ul>
         <h2>SIVASAK</h2>
@@ -24,7 +25,9 @@
         <li><img src="alert.png" alt=""><a href="daftarkomplain.php">Daftar Komplain</a></li>
     </ul>
 </div>
+</header>
 
+<body>
 <!-- Header Section -->
 <div class="navbar">
     <div class="menu">
@@ -42,6 +45,8 @@
     <h2>Hasil Questioner</h2>
     <button class="back-tombol" onclick="window.location.href='daftarquestioner.php'">Kembali</button>
     <!-- Table for displaying questions and answers -->
+   
+    <div class="table-content">
     <table>
         <thead>
             <tr>
@@ -140,6 +145,7 @@
             <!-- Add more rows as necessary -->
         </tbody>
     </table>
+    </div>
 </div>
 
 </body>
