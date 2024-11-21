@@ -9,22 +9,7 @@
 <body>
 
 <!-- Sidebar -->
-<div class="sidebar">
-    <ul>
-        <h2>SIVASAK</h2>
-        <li><img src="home.png" alt=""><a href="dashboard.php">Dashboard</a></li>
-        <li><img src="pb.png" alt=""><a href="listtawaran.php">Buat Tawaran</a></li>
-        <li><img src="cb.png" alt=""><a href="seleksivendor.php">Seleksi Vendor</a></li>
-        <li><img src="sh.png" alt=""><a href="negoisasi.php">Negosiasi</a></li>
-        <li><img src="undo.png" alt=""><a href="kontroltender.php">Kontrol Tender</a></li>
-        <li><img src="file.png" alt=""><a href="daftarquestioner.php">Questioner</a></li>
-        <li><img src="bat.png" alt=""><a href="pembuatantender.php">Buat Akun Vendor</a></li>
-        <li><img src="bat.png" alt=""><a href="datacalonvendor.php">Data Calon Vendor</a></li>
-        <li><img src="as.png" alt=""><a href="buatakunsupir.php">Buat Akun Supir</a></li>
-        <li><img src="file.png" alt=""><a href="datakendaraan.php">Data Kendaraan</a></li>
-        <li><img src="alert.png" alt=""><a href="daftarkomplain.php">Daftar Komplain</a></li>
-    </ul>
-</div>
+<?php include 'sidebar.php' ?>
 
 <!-- Navbar -->
 <div class="navbar">
@@ -38,7 +23,18 @@
 
 <!-- Daftar Akun Supir -->
 <div class="content">
-    <h2>Daftar Akun Supir</h2>
+    <h2>Daftar Supir</h2>
+
+    <div class="wrapper">
+        <div class="button-container-supir">
+            <button class="tambah-button" onclick="window.location.href='tambahakunsupir.php'">Tambah Akun</button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Cari Daftar Supir">
+            <button class="search-button">Cari</button>
+        </div>
+    </div>
 
     <div class="table-container">
         <table>
@@ -63,18 +59,18 @@
                     <td>1234567890</td>
                     <td>
                         <button class="edit-button" onclick="window.location.href='editakunsupir.php'">Edit</button>
-                        <button class="cek-button" onclick="openModal()">Cek</button>
+                        <button class="cek-button" onclick="window.location.href='detaildaftarsupir.php'">Cek</button>
                         <button class="delete-button" onclick="openDeleteModal()">Hapus</button>
                     </td>
                 </tr>
                 <!-- Tambahkan baris data supir lainnya -->
             </tbody>
         </table>
-        <!-- Tombol Tambah Akun -->
-    <div class="button-container-supir">
-        <button class="tambah-button" onclick="window.location.href='tambahakunsupir.php'">Tambah Akun</button>
     </div>
-    </div>
+</div>
+
+<div class="footer">
+        Copyright © 2024. All rights reserved.
 </div>
 
 <!-- Modal Pop-up untuk Cek Akun Supir -->

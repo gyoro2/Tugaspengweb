@@ -124,18 +124,18 @@ body {
 .button-container-supir {
     display: flex;
     justify-content: right;
-    margin-top: 10px;
     margin-bottom: 20px;
 }
 
 .button-container-tawaran, .search-container-tawaran{
     display: flex;
     align-items: right;
+    margin-bottom: 20px;
 }
 
 .wrapper {
     display: flex;
-    align-items: right;
+    align-items: center;
     justify-content: right;
     gap: 10px; /* Mengatur jarak antar elemen */
     margin-top: 10px;
@@ -1002,9 +1002,9 @@ table, th, td {
 }
 
 thead th {
-    background-color: #e1e6f4;
-    color: #333333;
-    font-weight: normal; /* Non-bold header */
+    background-color: #4891F6;
+    color: white;
+    font-weight: bold; /* Non-bold header */
     font-size: 12px; /* Consistent font size with table content */
     text-align: center; /* Center align header text */
 }
@@ -1236,7 +1236,7 @@ td img {
 }
 
 .halaman-questioner thead th {
-    background-color: #AAC0F5; /* Warna biru */
+    background-color: #4891F6; /* Warna biru */
     color: white; /* Teks putih */
     padding: 8px; /* Spasi */
     text-align: left; /* Rata tengah */

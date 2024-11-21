@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Akun Supir</title>
     <link rel="stylesheet" href="styledash.css">
 </head>
+<body>
 
-<header>
 <!-- Sidebar -->
 <?php include 'sidebar.php'?>
-</header>
 
-<body>
+<!-- Navbar -->
 <div class="navbar">
-        <div class="menu">
-            <ul>
-                <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Admin</a><img src="bp.png" alt=""></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
     </div>
+</div>
 
-    <!-- Daftar Akun Supir -->
-    <div class="content">
-        <h2>Tambah Akun Supir</h2>
-        <div class="form-container">
-            <form action="proses_input.php" method="POST">
-                    <tr>
+<!-- Edit Akun Supir Form -->
+<div class="content">
+    <h2>Edit Data Kendaraan</h2>
+    <div class="form-container">
+        <form action="proses-edit-data-kendaraan.php" method="POST">
+        <tr>
                         <th>Nomor Polisi</th>
                         <td><input type="text" name="nomor_polisi"></td>
                     </tr>
@@ -68,12 +69,13 @@
                         <th>Keterangan</th>
                         <td><input type="text" name="keterangan"></td>
                     </tr>
-                    <div class="form-buttons">
-                <button type="submit" class="submit-button">Simpan</button>
-                <button type="button" class="cancel-button" onclick="window.history.back()">Batal</button>
-            </form>
-        </div>
+            <div class="form-buttons" style="background-color: #29A009;">
+                <button type="submit" class="submit-button">Buat Akun</button>
+            </div>
+    </form>    
     </div>
+    <button class="back-tombol" onclick="window.history.back()" style="margin-left: 291px; margin-top: 20px;">Kembali</button>
+</div>
 
 </body>
 </html>
