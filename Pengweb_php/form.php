@@ -62,6 +62,41 @@
 
             if (!isValid) event.preventDefault();
         });
+        <script>
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Mencegah form terkirim langsung untuk memberikan pop-up
+        const isValid = validateForm();
+
+        if (isValid) {
+            alert('Form berhasil dikirim!');
+            this.submit(); // Melanjutkan pengiriman form
+        }
+    });
+
+    function validateForm() {
+        let isValid = true;
+
+        // Validasi tambahan di sini, seperti panjang teks, ukuran file, dsb.
+        const fileInput = document.getElementById('fileUpload');
+        const file = fileInput.files[0];
+        const name = document.getElementById('name').value;
+
+        if (file && file.size > 1048576) { // 1 MB
+            alert('Ukuran file tidak boleh lebih dari 1MB.');
+            isValid = false;
+        }
+
+        if (name.length < 3) {
+            alert('Nama harus lebih dari 3 karakter.');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+</script>
+
+
+
     </script>
 </body>
 </html>

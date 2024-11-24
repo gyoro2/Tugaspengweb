@@ -19,6 +19,7 @@ $userAgent = $_SERVER['HTTP_USER_AGENT'];
 </head>
 <body>
     <h1>Hasil Pendaftaran</h1>
+    <div class="tabel_form">
     <table>
         <tr>
             <th>Nama</th>
@@ -41,8 +42,12 @@ $userAgent = $_SERVER['HTTP_USER_AGENT'];
             <td><?= htmlspecialchars($userAgent) ?></td>
         </tr>
     </table>
+    </div>
 
+    <div class="hasil">
     <h2>Isi File:</h2>
     <pre><?= htmlspecialchars($data['fileContent']) ?></pre>
+    </div>
+
 </body>
 </html>
