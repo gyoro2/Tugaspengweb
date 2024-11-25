@@ -41,6 +41,7 @@ $conn->close();
         <input type="text" id="nim" name="nim"><br>
         <button type="submit">Submit</button>
     </form>
-    <a href="display.php">Tampilkan Data</a>
+    <br>
+    <a href="display.php"><button class="link-button">Tampilkan Data</button></a>
 </body>
-</html
+</html>

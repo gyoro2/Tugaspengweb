@@ -42,6 +42,7 @@ $total_pages = ceil($total_data / $limit);
 
     <h2>Data dari Tabel Account</h2>
 
+    <div class="tabel">
     <table border="1">
         <thead>
             <tr>
@@ -66,20 +67,21 @@ $total_pages = ceil($total_data / $limit);
             ?>
         </tbody>
     </table>
+    </div>
     <br>
 
     <!-- Navigasi Pagination -->
-    <div>
+    <div class="pagination">
         <?php if ($page > 1): ?>
-            <a href="?page=<?php echo $page - 1; ?>"><button>Back</button></a>
+            <a href="?page=<?php echo $page - 1; ?>"><button class="small">Back</button></a>
         <?php endif; ?>
 
         <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-            <a href="?page=<?php echo $i; ?>"><button <?php echo $i == $page ? 'style="font-weight:bold;"' : ''; ?>><?php echo $i; ?></button></a>
+            <a href="?page=<?php echo $i; ?>"><button class="small" <?php echo $i == $page ? 'style="font-weight:bold;"' : ''; ?>><?php echo $i; ?></button></a>
         <?php endfor; ?>
 
         <?php if ($page < $total_pages): ?>
-            <a href="?page=<?php echo $page + 1; ?>"><button>Next</button></a>
+            <a href="?page=<?php echo $page + 1; ?>"><button class="small">Next</button></a>
         <?php endif; ?>
     </div>
 
