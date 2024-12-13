@@ -47,11 +47,11 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD PHP</title>
+    <title>Form Pendaftaran</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>CRUD PHP</h1>
+    <h1>Form Pendaftaran Member JMK48</h1>
 
     <!-- Add and Update Form -->
     <form method="POST">
@@ -93,7 +93,7 @@ $result = $conn->query($sql);
                 <?php endwhile; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="4">No data found</td>
+                    <td colspan="4">Belum ada yang mendaftar</td>
                 </tr>
             <?php endif; ?>
         </tbody>

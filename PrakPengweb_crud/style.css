@@ -30,7 +30,7 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: red;
     color: white;
     text-transform: uppercase;
 }
@@ -58,7 +58,7 @@ input[type="text"], input[type="email"] {
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: blue;
     color: white;
     border: none;
     border-radius: 5px;
@@ -68,7 +68,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: gray;
 }
 
 a {
